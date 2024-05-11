@@ -2,3 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+//pallete of colors 
+$black: #010100;
+$white: #fffefe;
+
+/* 
+    -- 
+        Define global , 
+        structural styles for project:
+        (width and height for all views, colors and background colors) 
+    --
+*/
+#home__section {
+    background-color: $white;
+    color: $black;
+    height: 65vh;
+    width: 100vw;
+}
+
+#about {
+    color: $white;
+    background-color: $black;
+    height: 25vh;
+    width: 100vw;
+}
+
+#projects {
+    background-color: $white;
+    color: $black;
+    height: 70vh;
+    width: 100vw;
+}
+
+#lets-talk {
+    background-color: $black;
+    color: $white;
+    height: 20vh;
+    width: 100vw;
+}
+
+#footer {
+    background-color: $white;
+    color: $black;
+    height: 30vh;
+    width: 100vw;
+}
