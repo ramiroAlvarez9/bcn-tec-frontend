@@ -11,22 +11,22 @@ interface Props {}
 const HeaderSocialMediaBar: NextPage<Props> = ({}) => {
   return (
     <>
-      <aside className="tw-w-5 tw-flex tw-flex-col tw-items-center tw-mt-4 tw-mr-4">
+      <aside className="tw-w-5 tw-flex tw-flex-col tw-items-center tw-mt-8 tw-mr-4">
           <Image
             priority
             src={TopBar}
             alt="mail icon"
-            width={10}
-            height={58}
-            className="tw-mb-6 "
+            width={11}
+            height={62}
+            className="tw-mb-6"
           />
         
         <Icons
           mailIcon={mailIcon}
           linkedinIcon={linkedinIcon}
           instagramIcon={instagramIcon}
-          width={16}
-          height={16}
+          width={36}
+          height={36}
           tailwindProperties="tw-mb-2"
         />
       </aside>
