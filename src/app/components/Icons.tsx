@@ -1,50 +1,50 @@
 import { NextPage } from "next";
 import Image from "next/image";
 
+interface Icon {
+  svgImage: { src: string };
+  alt: string;
+  link: string;
+}
+
 interface Props {
-  linkedinIcon: any;
-  mailIcon: any;
-  instagramIcon: any;
+  arrayOfIcons: Icon[];
   width: number;
   height: number;
-  tailwindProperties: string;
+  tailwindImgProperties: string;
+  tailwindParentDivProperties: string;
 }
 
 const Icons: NextPage<Props> = ({
-  instagramIcon,
-  linkedinIcon,
-  mailIcon,
+  arrayOfIcons,
   width,
   height,
-  tailwindProperties,
+  tailwindImgProperties,
+  tailwindParentDivProperties,
 }) => {
   return (
     <>
-      <Image
-        priority
-        src={linkedinIcon}
-        alt="Linkedin"
-        width={width}
-        height={height}
-        className={tailwindProperties}
-      />
-      <Image
-        priority
-        src={mailIcon}
-        alt="Mail"
-        width={width}
-        height={height}
-        className={tailwindProperties}
-      />
-
-      <Image
-        priority
-        src={instagramIcon}
-        alt="Instagram"
-        width={width}
-        height={height}
-        className={tailwindProperties}
-      />
+      <div
+        className={tailwindParentDivProperties}
+      >
+        {arrayOfIcons.map((icon: Icon, key: number) => (
+          <a
+            key={key}
+            target="_blank"
+            href={icon.link}
+            rel="noopener noreferrer"
+          >
+            <Image
+              priority
+              src={icon.svgImage.src}
+              alt={icon.alt}
+              width={width}
+              height={height}
+              className={tailwindImgProperties}
+            />
+          </a>
+        ))}
+      </div>
     </>
   );
 };
