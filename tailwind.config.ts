@@ -8,6 +8,14 @@ const config: Config = {
   ],
   prefix: 'tw-',
   theme: {
+    fontSize: {
+      xxs :['8px', '10px'],
+      xs :['12px', '14px'],
+      sm: ['14px', '20px'],
+      base: ['16px', '24px'],
+      lg: ['20px', '28px'],
+      xl: ['24px', '32px'],
+    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

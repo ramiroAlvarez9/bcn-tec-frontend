@@ -36,7 +36,7 @@ const Slide: NextPage<Props> = ({
           transition: "transform 0.5s ease-in", //visibility 0.5 linear ,opacity 0.5 linear
         }}
       >
-        <div className="tw-mt-32 slide__itemsContainer tw-h-3/4 tw-flex tw-flex-row-reverse">
+        <div className="tw-mt-32 slide__itemsContainer tw-h-82 tw-flex tw-flex-row-reverse">
 
           <Icons
             arrayOfIcons={[
@@ -54,7 +54,7 @@ const Slide: NextPage<Props> = ({
             width={36}
             height={36}
             tailwindImgProperties="tw-mb-4"
-            tailwindParentDivProperties="icons__container tw-w-1/6 tw-h-full tw-flex tw-flex-col tw-items-center tw-justify-center" 
+            tailwindParentDivProperties="icons__container tw-w-full tw-h-82 tw-flex tw-flex-col tw-items-center tw-justify-center  " 
           />
 
           {/*Links section*/}
