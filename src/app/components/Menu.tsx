@@ -8,9 +8,10 @@ export default function MobileNav() {
 
   const [slideMenuPositionX, setSlideMenuPositionX] = useState<number>(-100);
   const [isOpen, setOpen] = useState<boolean>(false);
-  const [visibilityModal, setVisibilityModal]  = useState<  Visibility | undefined | any>('hidden');
+  const [visibilityModal, setVisibilityModal] = useState<
+    Visibility | undefined | any
+  >("hidden");
   const [opacityModal, setOpacityModal] = useState<number>(0);
-
 
   const openTheMenu = (): void => {
     /* 
@@ -23,13 +24,13 @@ export default function MobileNav() {
     */
     setSlideMenuPositionX(0);
     document.body.style.overflowY = "hidden";
-    setVisibilityModal('visible')
+    setVisibilityModal("visible");
     setOpacityModal(1);
   };
   const closeTheMenu = (): void => {
     setSlideMenuPositionX(-101);
     document.body.style.overflowY = "visible";
-    setVisibilityModal('hidden')
+    setVisibilityModal("hidden");
     setOpacityModal(0);
   };
 
@@ -39,20 +40,29 @@ export default function MobileNav() {
 
   return (
     <>
+      {/* Sombreado effect */}
       <div
         className="modal tw-fixed tw-z-0 tw-w-screen tw-h-screen "
-        style={{visibility: visibilityModal , opacity: opacityModal ,transition: 'visibility 0.5s,  opacity 0.5s linear', backgroundColor: "#01010055",  }}
+        style={{
+          visibility: visibilityModal,
+          opacity: opacityModal,
+          transition: "visibility 0.5s,  opacity 0.5s linear",
+          backgroundColor: "#01010055",
+        }}
+
       >
         
       </div>
-      <nav className="nav tw-w-12 tw-h-12 tw-flex tw-justify-center tw-items-center">
-        <div className="tw-absolute tw-z-20">
+      {/* -------------------- */}
+      
+      <nav className="nav tw-w-1/3 tw-h-12 tw-flex tw-justify-center tw-items-center tw-mt-4">
+        <div className="tw-absolute tw-z-20"> 
           <Hamburger toggled={isOpen} toggle={setOpen} duration={0.8} />
         </div>
       </nav>
 
       <Slide
-        visibility= {visibilityModal}
+        visibility={visibilityModal}
         slideMenuPositionX={slideMenuPositionX}
         closeTheMenu={closeTheMenu}
         setOpen={setOpen}

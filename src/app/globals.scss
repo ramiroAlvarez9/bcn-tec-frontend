@@ -13,33 +13,29 @@ $white: #fffefe;
         (width and height for all views, colors and background colors) 
     --
 */
+//menu section slide
+.slide {
+    font-weight: 350;
+    background-color: $white;
+    font-size: 5rem;
+    letter-spacing: 3px;
+}
 
 #home__section {
     background-color: $white;
     color: $black;
-    height: 70vh;
+    height: 50vh;
     width: 100vw;
 
-    //menu section slide
-    .slide {
-        font-weight: 350;
-        background-color: $white;
-        font-size: 22vw;
-        letter-spacing: 3px;
-    }
-
     .h1__title {
-        
-        margin: 5% 0 0 10%;
-        font-size: 20px;
-        font-weight: 600;
+        //margin: 5% 0 0 5%;
         overflow: hidden;
         /* Ensures the content is not revealed until the animation */
-        border-right: .15em solid orange;
+        border-right: .15em solid #6cfccc;
         /* The typwriter cursor */
         white-space: nowrap;
         /* Keeps the content on a single line */
-        //margin: 0 auto;
+        font-size: 24px;
         /* Gives that scrolling effect as the typing happens */
         letter-spacing: .15em;
         /* Adjust as needed */
@@ -55,7 +51,7 @@ $white: #fffefe;
         }
 
         to {
-            width: 70%
+            width: 100%
         }
     }
 
@@ -67,8 +63,8 @@ $white: #fffefe;
             border-color: transparent
         }
 
-        50% {
-            border-color: rgb(255, 255, 255);
+        60% {
+            border-color: #6cfccc;
         }
     }
 
@@ -77,8 +73,38 @@ $white: #fffefe;
 #about {
     color: $white;
     background-color: $black;
-    height: 25vh;
+    height: 40vh;
     width: 100vw;
+
+    .about__container {
+        .line__container {
+            height: 5%;
+
+            .line {
+                width: 11%;
+                height: 100%;
+                border-radius: 1px;
+            }
+        }
+
+        .about__text--container {
+
+            .about__title {
+                position: relative;
+                z-index:2;
+                top:45%;
+                font-size: 1.5rem;
+            }
+
+            .about__paragraph {
+                line-height: 1rem;
+                font-size: 0.9rem;
+                padding-bottom:15px;
+                font-weight: 200;
+
+            }
+        }
+    }
 }
 
 #projects {
@@ -98,6 +124,6 @@ $white: #fffefe;
 #footer {
     background-color: $white;
     color: $black;
-    height: 30vh;
+    height: auto;
     width: 100vw;
 }

@@ -11,40 +11,43 @@ interface Props {}
 const HeaderSocialMediaBar: NextPage<Props> = ({}) => {
   return (
     <>
-      <aside className="tw-w-5 tw-flex tw-flex-col tw-items-center tw-mt-8 tw-mr-4">
-        <Image
-          priority
-          src={TopBar}
-          alt="mail icon"
-          width={11}
-          height={62}
-          className="tw-mb-6"
-        />
+      <aside className="tw-w-1/3 tw-flex tw-flex-col tw-items-end">
+        <div className="icons__container tw-mr-8 tw-mt-12 tw-flex tw-flex-col tw-items-center">
+          
+          <Image
+            priority
+            src={TopBar}
+            alt="mail icon"
+            width={8}
+            height={30}
+            className="tw-mb-6"
+          />
 
-        <Icons
-          arrayOfIcons={[
-            {
-              svgImage: mailIcon,
-              alt: "Mail",
-              link: "www.google.com",
-            },
-            {
-              svgImage: linkedinIcon,
-              alt: "Linkedin",
-              link: "www.google.com",
-            },
+          <Icons
+            arrayOfIcons={[
+              {
+                svgImage: mailIcon,
+                alt: "Mail",
+                link: "www.google.com",
+              },
+              {
+                svgImage: linkedinIcon,
+                alt: "Linkedin",
+                link: "www.google.com",
+              },
 
-            {
-              svgImage: instagramIcon,
-              alt: "Instagram",
-              link: "www.google.com",
-            },
-          ]}
-          width={36}
-          height={36}
-          tailwindImgProperties="tw-mb-2"
-          tailwindParentDivProperties=""
-        />
+              {
+                svgImage: instagramIcon,
+                alt: "Instagram",
+                link: "www.google.com",
+              },
+            ]}
+            width={16}
+            height={16}
+            tailwindImgProperties="tw-mb-2"
+            tailwindParentDivProperties=""
+          />
+        </div>
       </aside>
     </>
   );

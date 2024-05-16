@@ -7,19 +7,16 @@ interface Props {}
 const LogoSection: NextPage<Props> = ({}) => {
   return (
     <>
-      <section
-        className="tw-w-full tw-h-full tw-flex tw-flex-col tw-items-center "
-      >
 
-        <div className="logoContainer tw-w-52 tw-h-52">
-          <Lottie animationData={animateLogo} loop={true} />
-        </div>
+      <div className="logoContainer tw-w-64 tw-h-64  ">
+        <Lottie animationData={animateLogo} loop={true} />
+      </div>
 
+      <div className="tw-w-auto tw-flex tw-items-center tw-justify-center tw-ml-4 tw-mt-4">
         <h1 className="h1__title">
           {"<h1>"} Hello, World! {"</h1>"}
         </h1>
-      
-      </section>
+      </div>
     </>
   );
 };
