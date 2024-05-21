@@ -13,6 +13,9 @@ $white: #fffefe;
         (width and height for all views, colors and background colors) 
     --
 */
+
+
+
 //menu section slide
 .slide {
     font-weight: 350;
@@ -94,6 +97,7 @@ $white: #fffefe;
                 z-index: 2;
                 top: 45%;
                 font-size: 1.5rem;
+                font-weight: 600;
             }
 
             .about__paragraph {
@@ -109,19 +113,35 @@ $white: #fffefe;
 #projects {
     background-color: $white;
     color: $black;
-    height: 70vh;
+    height: 100vh;
     width: 100vw;
+    .horizontal-section {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        .horizontal-panel{
+            width: 100%;
+            height: 100%;
+            flex: 1 0 100%;
+            overflow: hidden;
+        }
+    }
+
 }
 
 #lets-talk {
     background-color: $black;
     color: $white;
+    margin-top: 100vh;
     height: 20vh;
     width: 100vw;
+
 
     .lets-talk__container {
 
         border-bottom: solid 1px white;
+
         .lets-talk__title {
             font-weight: 100;
             font-size: 3rem;
@@ -136,4 +156,63 @@ $white: #fffefe;
     color: $black;
     height: auto;
     width: 100vw;
+}
+
+//tablets
+@media (min-width: 768px) {
+
+
+    //about section
+    #about {
+        .about__container {
+            .line__container {
+                .line {}
+            }
+
+            .about__text--container {
+
+                .about__title {
+                    font-size: 2.1rem;
+
+                }
+
+                .about__paragraph {
+                    font-size: 1.3rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+//tablets
+@media (min-width: 1200px) {
+
+
+    //about section
+    #about {
+        .about__container {
+            max-width: 1200px;
+
+            .line__container {
+                .line {}
+            }
+
+            .about__text--container {
+
+                .about__title {
+                    font-size: 2rem;
+
+                }
+
+                .about__paragraph {
+                    font-size: 1.6rem;
+                    line-height: 1.6rem;
+                }
+            }
+        }
+    }
+
+
+
 }
