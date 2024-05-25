@@ -1,5 +1,6 @@
 "use client";
 import { NextPage } from "next";
+
 import Header from "../components/Header";
 import LogoSection from "../components/LogoSection";
 

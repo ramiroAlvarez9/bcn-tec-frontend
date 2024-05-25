@@ -1,8 +1,8 @@
-import MainPage from "./pages/main";
-import About from "./pages/about";
-import Projects from "./pages/projects";
-import LetsTalk from "./pages/lets-talk";
-import Footer from "./pages/footer";
+import MainPage from "./idHookPages/main";
+import About from "./idHookPages/about";
+import Projects from "./idHookPages/projects";
+import LetsTalk from "./idHookPages/lets-talk";
+import Footer from "./idHookPages/footer";
 
 export default function Home() {
   return (

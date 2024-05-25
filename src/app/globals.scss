@@ -10,11 +10,9 @@ $white: #fffefe;
     -- 
         Define global , 
         structural styles for project:
-        (width and height for all views, colors and background colors) 
+        (width and height for all views, colors and background colors, responsive media querys) 
     --
 */
-
-
 
 //menu section slide
 .slide {
@@ -115,19 +113,52 @@ $white: #fffefe;
     color: $black;
     height: 100vh;
     width: 100vw;
+
     .horizontal-section {
         display: flex;
         height: 100%;
         width: 100%;
         overflow: hidden;
-        .horizontal-panel{
+
+        .horizontal-panel {
             width: 100%;
             height: 100%;
             flex: 1 0 100%;
             overflow: hidden;
+
+            .container__carousel {
+                width: 100%;
+                height: 75%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .project__image {
+                    border: solid 1px rgb(142, 142, 142);
+
+                    width: 300px;
+                    height: 300px;
+                }
+
+                .title__container {
+                    width: 80%;
+                    height: auto;
+                    display: flex;
+                    justify-content: end;
+                    margin-top: 2%;
+
+                    .project__title {
+                        text-align: end;
+                        font-weight: 200;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+
+                    }
+                }
+            }
         }
     }
-
 }
 
 #lets-talk {
@@ -137,18 +168,23 @@ $white: #fffefe;
     height: 20vh;
     width: 100vw;
 
+    .lets-talk__subtitle {
+        font-size: 0.8rem;
+    }
 
     .lets-talk__container {
-
-        border-bottom: solid 1px white;
 
         .lets-talk__title {
             font-weight: 100;
             font-size: 3rem;
             letter-spacing: 0.2rem;
         }
-    }
 
+        .arrowTopRight {
+            width: 30px;
+            height: 30px;
+        }
+    }
 }
 
 #footer {
@@ -156,24 +192,27 @@ $white: #fffefe;
     color: $black;
     height: auto;
     width: 100vw;
+
 }
+
 
 //tablets
 @media (min-width: 768px) {
 
+    #home__section {
+        height: 60vh;
+
+    }
 
     //about section
     #about {
         .about__container {
-            .line__container {
-                .line {}
-            }
+            .line__container {}
 
             .about__text--container {
 
                 .about__title {
                     font-size: 2.1rem;
-
                 }
 
                 .about__paragraph {
@@ -183,20 +222,196 @@ $white: #fffefe;
             }
         }
     }
+
+    #projects {
+
+
+        .horizontal-section {
+            .horizontal-panel {
+                .container__carousel {
+                    .project__image {
+                        width: 500px;
+                        height: 500px;
+                    }
+
+                    .title__container {
+                        width: 500px;
+
+                        .bar-bottom {
+                            background-color: $black;
+                            height: 30%;
+
+                        }
+
+                        .project__title {
+                            font-size: 32px;
+                            text-align: end;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    #lets-talk {
+
+        .lets-talk__subtitle {
+            margin-bottom: -3%;
+            width: 50%;
+
+        }
+
+        .lets-talk__container {
+            width: 50%;
+
+            .lets-talk__title {
+                margin-bottom: -5%;
+            }
+
+            .arrowTopRight {
+                width: 50px;
+                height: 50px;
+            }
+
+
+        }
+    }
+
+    #footer {
+        .links__column {
+            margin-left: 15%;
+        }
+
+        .footer__text {
+            line-height: 1rem;
+            font-size: 0.8rem;
+        }
+
+        .logo__container {
+
+            //margin-left: 5%;
+            .logo__img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+
+
+
 }
 
-//tablets
+
+@media (orientation: landscape) {
+    #home__section {
+        height: 50vw;
+    }
+
+    #about {
+        height: 40vw;
+    }
+
+
+    #projects {
+        .horizontal-section {
+            .horizontal-panel {
+                .container__carousel {
+
+                    .project__image {
+                        width: 300px;
+                        height: 300px;
+                    }
+
+                    .title__container {
+                        height: 20%;
+
+                        .bar-bottom {
+                            background-color: $black;
+                            height: 50%;
+
+                        }
+
+                        .project__title {
+                            font-size: 24px;
+                            text-align: end;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #lets-talk {
+        height: 50vh;
+
+        .lets-talk__subtitle {
+            width: 50%;
+            margin-top: 3%;
+
+        }
+
+        .lets-talk__container {
+            width: 50%;
+
+            .lets-talk__title {}
+
+            .arrowTopRight {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+
+    .slide {
+        font-weight: 350;
+        background-color: $white;
+        font-size: 3rem;
+        letter-spacing: 3px;
+    }
+
+    .slide {
+        font-weight: 350;
+        background-color: $white;
+        font-size: 3.5rem;
+        letter-spacing: 3px;
+
+        .slide__itemsContainer {
+            margin-top: 10%;
+
+            .icons__container {
+                //border: solid 1px red;
+                width: 50%
+            }
+
+            .links__container {
+                width: 50%;
+                align-items: center;
+            }
+        }
+    }
+
+}
+
+
+//desktop
 @media (min-width: 1200px) {
 
+    #home__section {
+
+        height: 70vh;
+        width: 100vw;
+    }
 
     //about section
     #about {
-        .about__container {
-            max-width: 1200px;
+        height: 40vh;
 
-            .line__container {
-                .line {}
-            }
+        .about__container {
+            max-width: 900px;
 
             .about__text--container {
 
@@ -213,6 +428,101 @@ $white: #fffefe;
         }
     }
 
+    #about {
+        height: 55vh;
+    }
 
+    #projects {
+        .horizontal-section {
+            .horizontal-panel {
+                .container__carousel {
+                    .project__image {
+                        width: 600px;
+                        height: 600px;
+                    }
+
+                    .title__container {
+                        width: 600px;
+
+                        .bar-bottom {
+                            background-color: $black;
+                            height: 25%;
+
+                        }
+
+                        .project__title {
+                            font-size: 44px;
+                            text-align: end;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #lets-talk {
+
+
+
+        .lets-talk__subtitle {
+            font-size: 1rem;
+            width: 60%;
+
+        }
+
+        .lets-talk__container {
+            width: 60%;
+
+            .lets-talk__title {
+                font-size: 8rem;
+            }
+
+            .arrowTopRight {
+
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+
+
+    #footer {
+        .footer__container {
+
+            .logo__container {
+                margin-left: 2%;
+
+                .logo__img {
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+
+            .upArrowContainer {
+                margin-right: 2%;
+            }
+        }
+
+    }
+
+    .slide {
+        font-size: 10rem;
+
+        .slide__itemsContainer {
+
+            .icons__container {
+                .icons {
+                    width: 20%;
+                    height: 20%;
+                }
+            }
+
+            .links__container {
+                align-items: start;
+
+            }
+        }
+    }
 
 }

@@ -17,10 +17,10 @@ const Footer: NextPage<Props> = ({}) => {
   const LinksColumnStyles: LinksColumnStyles = {
     tailwindParentProperties: {
       properties:
-        " tw-w-1/5 tw-h-full tw-ml-8 tw-flex tw-flex-col tw-justify-start tw-items-center",
+        "links__column tw-w-1/5 tw-h-full tw-ml-10 tw-flex tw-flex-col tw-justify-start tw-items-center",
     },
     tailwindListElementProperties: {
-      properties: "tw-text-xxs tw-w-full",
+      properties: "footer__text tw-text-xxs tw-w-full",
     },
   };
 
@@ -33,8 +33,8 @@ const Footer: NextPage<Props> = ({}) => {
             height={60}
             width={60}
             alt="bcn-tec"
-            tailwindParentProperties="tw-h-full tw-w-1/5 tw-flex tw-flex-col tw-justify-start tw"
-            tailwindImgProperties="tw-ml-4 "
+            tailwindParentProperties="logo__container tw-h-full tw-w-1/5 tw-flex tw-flex-col tw-justify-start tw"
+            tailwindImgProperties="logo__img tw-ml-4 "
           />
 
           <div className="links__container tw-w-3/5 tw-flex tw-flex-row">

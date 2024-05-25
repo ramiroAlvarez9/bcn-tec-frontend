@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import Image from "next/image";
 
 interface Props {
@@ -10,17 +9,17 @@ interface Props {
   tailwindParentProperties: string;
 }
 
-const Logo: NextPage<Props> = ({
+const Logo = ({
   svgImage,
   width,
   height,
   alt,
   tailwindImgProperties,
   tailwindParentProperties,
-}) => {
+}: Props) => {
   return (
     <>
-      <div className={ tailwindParentProperties }>
+      <div className={tailwindParentProperties}>
         <Image
           src={svgImage}
           width={width}

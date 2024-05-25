@@ -15,12 +15,8 @@ interface Props {
   setOpen: any;
 }
 
-const Slide: NextPage<Props> = ({
-  visibility,
-  slideMenuPositionX,
-  closeTheMenu,
-  setOpen,
-}) => {
+const Slide = ({ visibility, slideMenuPositionX, closeTheMenu, setOpen  } : Props ) => {
+  
   const [opacityValue, setOpacityValue] = useState<number>(0);
 
   useEffect(() => {
@@ -51,15 +47,13 @@ const Slide: NextPage<Props> = ({
                 link: "www.google.com",
               },
             ]}
-            width={36}
-            height={36}
-            tailwindImgProperties="tw-mb-4"
-            tailwindParentDivProperties="icons__container tw-w-1/4 tw-h-full tw-flex tw-flex-col tw-items-center tw-justify-center  " 
+            tailwindImgProperties="icons tw-relative tw-w-8 tw-h-8 tw-mb-2"
+            tailwindParentDivProperties="icons__container  tw-w-1/4 tw-h-full tw-flex tw-flex-col tw-items-center tw-justify-center  " 
           />
 
           {/*Links section*/}
 
-          <div className="tw-w-3/4 tw-flex tw-flex-col tw-justify-center">
+          <div className="links__container tw-ml-2 tw-w-3/4 tw-flex tw-flex-col tw-justify-center">
             <Link
               className="tw-w-1/2"
               href="/"

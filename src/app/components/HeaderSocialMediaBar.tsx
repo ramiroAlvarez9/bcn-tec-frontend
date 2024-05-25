@@ -8,10 +8,11 @@ import Icons from "./Icons";
 
 interface Props {}
 
-const HeaderSocialMediaBar: NextPage<Props> = ({}) => {
-  return (
+const HeaderSocialMediaBar = ({} : Props) => {
+  return  (
     <>
       <aside className="tw-w-1/3 tw-flex tw-flex-col tw-items-end">
+
         <div className="icons__container tw-mr-8 tw-mt-12 tw-flex tw-flex-col tw-items-center">
           
           <Image
@@ -42,13 +43,14 @@ const HeaderSocialMediaBar: NextPage<Props> = ({}) => {
                 link: "www.google.com",
               },
             ]}
-            width={16}
-            height={16}
-            tailwindImgProperties="tw-mb-2"
+            tailwindImgProperties="icons tw-relative tw-w-6 tw-h-6 tw-mb-2"
             tailwindParentDivProperties=""
           />
+          
         </div>
+
       </aside>
+
     </>
   );
 };

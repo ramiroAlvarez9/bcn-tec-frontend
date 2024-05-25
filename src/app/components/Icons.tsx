@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import Image from "next/image";
 
 interface Icon {
@@ -9,40 +8,25 @@ interface Icon {
 
 interface Props {
   arrayOfIcons: Icon[];
-  width: number;
-  height: number;
   tailwindImgProperties: string;
   tailwindParentDivProperties: string;
 }
 
-const Icons: NextPage<Props> = ({
-  arrayOfIcons,
-  width,
-  height,
-  tailwindImgProperties,
-  tailwindParentDivProperties,
-}) => {
+const Icons = ({ arrayOfIcons, tailwindImgProperties, tailwindParentDivProperties, }: Props) => {
   return (
     <>
-      <div
-        className={tailwindParentDivProperties}
-      >
+      <div className={tailwindParentDivProperties}>
         {arrayOfIcons.map((icon: Icon, key: number) => (
-          <a
-            key={key}
-            target="_blank"
-            href={icon.link}
-            rel="noopener noreferrer"
-          >
-            <Image
-              priority
-              src={icon.svgImage.src}
-              alt={icon.alt}
-              width={width}
-              height={height}
-              className={tailwindImgProperties}
-            />
-          </a>
+          <div className={tailwindImgProperties} key={key} >
+            <a
+              key={key}
+              target="_blank"
+              href={icon.link}
+              rel="noopener noreferrer"
+            >
+              <Image fill={true} src={icon.svgImage.src} alt={icon.alt} key={key}/>
+            </a>
+          </div>
         ))}
       </div>
     </>

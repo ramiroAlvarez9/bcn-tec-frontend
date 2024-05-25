@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import Menu from "../components/Menu";
 import HeaderSocialMediaBar from "../components/HeaderSocialMediaBar";
 import logoHeader from "../../../public/icons/logo_header.svg";
@@ -6,7 +5,7 @@ import Image from "next/image";
 
 interface Props {}
 
-const Header: NextPage<Props> = ({}) => {
+const Header  = ({} : Props ) => {
   return (
     <>
       <header className="tw-h-1/3 tw-w-full tw-flex tw-flex-row tw-justify-between  ">

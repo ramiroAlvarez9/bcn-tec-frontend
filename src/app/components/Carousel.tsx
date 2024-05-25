@@ -1,19 +1,19 @@
 "use client";
 import { useRef } from "react";
 import useIsomorphicLayoutEffect from "@/helpers/useIsomorphicLayoutEffect";
-import { NextPage } from "next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import ProjectsPage from "./ProjectsImgLink";
 
 interface Props {}
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-const Carousel: NextPage<Props> = ({}) => {
-  const horizontalSection = useRef<any>();
+const Carousel  = ({} : Props) => {
 
+  const horizontalSection = useRef<any>();
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const slides = gsap.utils.toArray(".horizontal-panel");
@@ -25,7 +25,6 @@ const Carousel: NextPage<Props> = ({}) => {
           pin: true,
           start: "top top",
           end: "+=100%",
-          //markers: true,
           scrub: 0.5,
         },
       });
@@ -36,9 +35,13 @@ const Carousel: NextPage<Props> = ({}) => {
   return (
     <>
       <section className="horizontal-section" ref={horizontalSection}>
-        <div className="horizontal-panel red    tw-bg-red-500" > 1 </div>
-        <div className="horizontal-panel purple tw-bg-green-500 "> 2 </div>
-        <div className="horizontal-panel green  tw-bg-blue-500 "> 3 </div>
+        
+        <ProjectsPage srcImage="" link = "/projects/projectpage" title="Altius Sky Project 1" />
+        
+        <ProjectsPage srcImage="" link = "/projects/projectpage" title="Altius Sky Project 2" />
+
+        <ProjectsPage srcImage="" link = "/projects/projectpage" title="Altius Sky Project 3" />
+        
       </section>
     </>
   );

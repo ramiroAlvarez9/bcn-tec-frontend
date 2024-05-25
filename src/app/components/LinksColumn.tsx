@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 
 interface Link {
   text: string;
@@ -12,7 +11,7 @@ interface Props {
   tailwindAnchorTagProperies: string;
 }
 
-const LinksColumn: NextPage<Props> = ({ links, tailwindParentProperties, tailwindListElementProperties, tailwindAnchorTagProperies }) => {
+const LinksColumn = ({ links, tailwindParentProperties, tailwindListElementProperties, tailwindAnchorTagProperies } : Props) => {
   return (
     <ul className= {tailwindParentProperties}>
       
@@ -20,7 +19,7 @@ const LinksColumn: NextPage<Props> = ({ links, tailwindParentProperties, tailwin
         
         <li key={index} className={tailwindListElementProperties}>
           
-          <a href={link.url} className="">
+          <a href={link.url} className= {tailwindAnchorTagProperies}>
             {link.text}
           </a>
 
