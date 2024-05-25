@@ -3,9 +3,9 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    
   ],
   prefix: "tw-",
   theme: {
@@ -16,6 +16,9 @@ const config: Config = {
       base: ["16px", "24px"],
       lg: ["20px", "28px"],
       xl: ["24px", "32px"],
+      xxl: ["32px", "42px"],
+      xxxl: ["42px", "52px"],
+      
     },
     extend: {
       backgroundImage: {
