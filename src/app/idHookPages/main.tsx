@@ -12,7 +12,9 @@ const Main: NextPage<Props> = ({}) => {
       <Header />
 
       <section id="home__section" className="tw-w-full tw-h-full tw-flex tw-flex-col tw-items-center ">
+        
         <LogoSection />
+
       </section>
     </>
   );

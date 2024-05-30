@@ -1,43 +1,49 @@
 .grid {
+    margin-left: 2%;
     display: grid;
     grid-template-columns: 96%;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 5% 0px;
+    grid-template-rows: repeat(5,1fr);
+    gap: 2% 0px;
     grid-auto-flow: row;
     grid-template-areas:
         "."
         "."
         "."
     ;
+    overflow: hidden;
+    padding-bottom: 25%; 
 }
 
 @media (min-width: 768px) {
     .grid {
-
         grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 50%;
-        gap: 5% 2%;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 3% 2%;
         grid-auto-flow: row;
         justify-content: stretch;
         grid-template-areas:
             ". ."
             ". .";
-
+        padding-bottom: 10%;
+    }
+    .grid > *:nth-child(3) {
+        margin-top: -5%;
     }
 }
 
 @media (orientation: landscape) {
     .grid {
-
         grid-template-columns: 50% 50%;
-        grid-template-rows: 50% 50%;
-        gap: 5% 2%;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 2% 2%;
         grid-auto-flow: row;
         justify-content: stretch;
         grid-template-areas:
             ". ."
             ". .";
-
+            padding-bottom: 0%;
+        margin-bottom: -5%;
     }
+
 
 }

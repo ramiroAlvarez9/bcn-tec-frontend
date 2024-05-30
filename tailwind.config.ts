@@ -18,6 +18,8 @@ const config: Config = {
       xl: ["24px", "32px"],
       xxl: ["32px", "42px"],
       xxxl: ["42px", "52px"],
+      xxxxl: ["52px", "62px"],
+      
       
     },
     extend: {

@@ -6,7 +6,7 @@ const Projects: NextPage<Props> = ({}) => {
   return (
     <>
       <main id="projects">
-
+      
       < Carousel />
 
       </main>

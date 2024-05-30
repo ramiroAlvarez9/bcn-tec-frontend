@@ -1,9 +1,11 @@
 "use client";
+import gsap from "gsap";
 import { useRef } from "react";
 import useIsomorphicLayoutEffect from "@/helpers/useIsomorphicLayoutEffect";
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import ProjectsPage from "./ProjectsImgLink";
+import ProjectsImgLink from "./ProjectsImgLink";
+import marco1 from "../../../public/icons/marco_animado_1.json";
+import marco2 from "../../../public/icons/marco_animado_2.json";
 
 interface Props {}
 
@@ -35,12 +37,11 @@ const Carousel  = ({} : Props) => {
   return (
     <>
       <section className="horizontal-section" ref={horizontalSection}>
+                
+        <ProjectsImgLink marco={marco1} marcoClassName = {"marco__carousel"} srcImage= "https://pics.craiyon.com/2023-11-14/dTh6GhCgTK2OB_mBISa-gg.webp" link = "/projects/projectpage" title="Altius Sky Project 1" />
         
-        <ProjectsPage srcImage="" link = "/projects/projectpage" title="Altius Sky Project 1" />
-        
-        <ProjectsPage srcImage="" link = "/projects/projectpage" title="Altius Sky Project 2" />
+        <ProjectsImgLink marco={marco2} marcoClassName = {"marco__carousel2"} srcImage= "https://pics.craiyon.com/2023-11-14/dTh6GhCgTK2OB_mBISa-gg.webp" link = "/projects/projectpage" title="Altius Sky Project 2" />
 
-        <ProjectsPage srcImage="" link = "/projects/projectpage" title="Altius Sky Project 3" />
         
       </section>
     </>

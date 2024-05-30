@@ -77,7 +77,7 @@ const Slide = ({ visibility, slideMenuPositionX, closeTheMenu, setOpen  } : Prop
             </Link>
             <Link
               className="tw-w-1/2"
-              href="#footer"
+              href="#lets-talk"
               onClick={() => {
                 closeTheMenu;
                 setOpen(false);

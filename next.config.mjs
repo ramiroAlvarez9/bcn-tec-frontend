@@ -4,8 +4,7 @@ const nextConfig = {
   images: {
     domains: [
       "pics.craiyon.com",
-      "64.media.tumblr.com",
-      "upload.wikimedia.org"
+      "perimeterinstitute.ca"
     ],
   },
 };

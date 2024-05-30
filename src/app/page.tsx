@@ -3,15 +3,18 @@ import About from "./idHookPages/about";
 import Projects from "./idHookPages/projects";
 import LetsTalk from "./idHookPages/lets-talk";
 import Footer from "./idHookPages/footer";
+import FooterSpace from "./components/FooterSpace";
+import FooterUpArrow from "./components/FooterUpArrow";
 
 export default function Home() {
   return (
     <>
       <MainPage />
-      <About    />
+      <About />
       <Projects />
       <LetsTalk />
-      <Footer   />
+      <FooterSpace />
+      < FooterUpArrow />
     </>
   );
 }

@@ -46,7 +46,7 @@ export default function MobileNav() {
         style={{
           visibility: visibilityModal,
           opacity: opacityModal,
-          transition: "visibility 0.5s,  opacity 0.5s linear",
+          transition: "visibility 0.5s,opacity 0.5s linear",
           backgroundColor: "#01010055",
         }}
 

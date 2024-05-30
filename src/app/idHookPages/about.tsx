@@ -1,40 +1,48 @@
+"use client";
 import { NextPage } from "next";
+import { useState } from "react";
+import AboutBottomBar from "../components/AboutBottomBar";
+import AboutTopBar from "../components/AboutTopBar";
+import AboutTitle from "../components/AboutTitle";
+import AboutParagraph from "../components/AboutParagraph";
 
 interface Props {}
 
 const About: NextPage<Props> = ({}) => {
+  const [clickOnTitle, setClickOnTitle] = useState<boolean>(false);
+  const [opacityParagraph, setOpacityParagraph] = useState<number>(0);
+  const [opacityTitle, setOpacityTitle] = useState<number>(1);
+  
+  const handleVisibility = ( click: boolean, opacityParagraphNumber: number, opacityTitleNumber: number ) => {
+    setClickOnTitle(click);
+    setOpacityParagraph(opacityParagraphNumber); 
+    setOpacityTitle(opacityTitleNumber);
+  };
+
   return (
     <>
       <section
         id="about"
-        className="tw-flex tw-flex-col tw-justify-center tw-items-center"
+        className="tw-flex tw-justify-center tw-items-center"
       >
-        <div className="about__container tw-w-3/4 tw-h-3/4 tw-flex tw-flex-col">
+        <div className="about__container tw-w-3/4 tw-h-3/4 tw-flex tw-flex-col tw-justify-between">
 
-          <div className="tw-w-full line__container tw-flex tw-justify-start">
-            <div className="line  tw-bg-white"></div>
-          </div>
+          <AboutTopBar />
 
           <div className="about__text--container">
-
-            <h2 className="about__title tw-text-center">WHY BCN TEC?</h2>
-
-            <p className="about__paragraph tw-text-center">
-              Somos un equipo moderno, innovador con muchos años de experiencia
-              en el sector tecnológico, desarrollo de software, liderando
-              oficinas técnicas y equipos IT. 
-              <br></br>
-              Con una vasta experiencia y
-              aplicando técnicas ágiles, logramos completar procesos que aporten
-              valor a nuestros clientes dando soluciones óptimas dentro del
-              ámbito de los mismos.
-            </p>
+            <AboutTitle
+              clickOnTitle={clickOnTitle}
+              handleVisibility = {handleVisibility}
+              opacityTitle={opacityTitle}
+            />
+            <AboutParagraph
+              clickOnTitle={clickOnTitle}
+              handleVisibility = {handleVisibility}
+              opacityParagraph={opacityParagraph}
+            />
           </div>
 
-          <div className="line__container tw-flex tw-justify-end">
-            <div className="line tw-border tw-border-b-white tw-w-1/6 tw-bg-white"></div>
-          </div>
-
+          <AboutBottomBar />
         </div>
       </section>
     </>
