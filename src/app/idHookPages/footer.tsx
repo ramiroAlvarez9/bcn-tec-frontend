@@ -12,8 +12,7 @@ const Footer: NextPage<Props> = ({}) => {
   useEffect(() => {
     const handleScroll = () => {
       window.innerHeight + window.scrollY >= document.body.offsetHeight
-        ? setZIndexTop(7) 
-        : setZIndexTop(-2);
+        ? setZIndexTop(7) : setZIndexTop(-2);
     };
 
     window.addEventListener("scroll", handleScroll);
