@@ -8,9 +8,6 @@ export default function MobileNav() {
 
   const [slideMenuPositionX, setSlideMenuPositionX] = useState<number>(-100);
   const [isOpen, setOpen] = useState<boolean>(false);
-  const [visibilityModal, setVisibilityModal] = useState<
-    Visibility | undefined | any
-  >("hidden");
   const [opacityModal, setOpacityModal] = useState<number>(0);
 
   const openTheMenu = (): void => {
@@ -24,13 +21,11 @@ export default function MobileNav() {
     */
     setSlideMenuPositionX(0);
     document.body.style.overflowY = "hidden";
-    setVisibilityModal("visible");
     setOpacityModal(1);
   };
   const closeTheMenu = (): void => {
     setSlideMenuPositionX(-101);
     document.body.style.overflowY = "visible";
-    setVisibilityModal("hidden");
     setOpacityModal(0);
   };
 
@@ -44,7 +39,7 @@ export default function MobileNav() {
       <div
         className="modal tw-fixed tw-z-0 tw-w-screen tw-h-screen "
         style={{
-          visibility: visibilityModal,
+          visibility: isOpen ? "visible" : "hidden",
           opacity: opacityModal,
           transition: "visibility 0.5s,opacity 0.5s linear",
           backgroundColor: "#01010055",
@@ -60,9 +55,9 @@ export default function MobileNav() {
           <Hamburger toggled={isOpen} toggle={setOpen} duration={0.8} />
         </div>
       </nav>
-
+       
       <Slide
-        visibility={visibilityModal}
+        isOpen = {isOpen}
         slideMenuPositionX={slideMenuPositionX}
         closeTheMenu={closeTheMenu}
         setOpen={setOpen}

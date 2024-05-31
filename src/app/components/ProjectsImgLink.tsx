@@ -20,7 +20,6 @@ const ProjectsImgLink = ({
   return (
     <>
       {/*the class horizontal-panel complies with the objective of apply the gsap ScrollTrigger effect */}
-
       <div className=" horizontal-panel red tw-flex tw-flex-col tw-justify-center tw-items-center">
         <div className="container__carousel ">
           <div className="project__image">
@@ -37,7 +36,7 @@ const ProjectsImgLink = ({
               src="https://perimeterinstitute.ca/sites/default/files/styles/hero_banner_small_1440x502/public/2020-11/WHAT_Centre_For_the_Universe.jpg"
               alt="image"
               className="tw-object-cover"
-              layout="fill"
+              fill
             />
           </div>
 

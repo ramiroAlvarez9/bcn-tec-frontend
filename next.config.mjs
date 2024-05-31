@@ -2,12 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [
-      "pics.craiyon.com",
-      "perimeterinstitute.ca"
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: "perimeterinstitute.ca",
+        pathname: '**',
+      },
     ],
-  },
+  },  
 };
+
+
 
 
 

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { NextPage } from "next";
 import logoFooter from "../../../public/icons/logo_footer.svg";
 import Logo from "../components/Logo";
@@ -8,25 +8,27 @@ import { useState, useEffect } from "react";
 interface Props {}
 
 const Footer: NextPage<Props> = ({}) => {
+  const [zIndexToTop, setZIndexTop] = useState<number>(-2);
   useEffect(() => {
-    
-    const onscroll = () => {
-      const scrolledTo = window.scrollY + window.innerHeight;
-      const isReachBottom = document.body.scrollHeight === scrolledTo;
-      isReachBottom ? setZIndexTop(5) : setZIndexTop(-2);
+    const handleScroll = () => {
+      window.innerHeight + window.scrollY >= document.body.offsetHeight
+        ? setZIndexTop(7) 
+        : setZIndexTop(-2);
     };
-    window.addEventListener("scroll", onscroll);
+
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", onscroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const [zIndexToTop, setZIndexTop] = useState<number>(-2);
-
-  return (  
+  return (
     <>
-      <div id="footer" style={{ position: 'fixed', zIndex: zIndexToTop, left: '2.5%'}} >
+      <div
+        id="footer"
+        style={{ position: "fixed", zIndex: zIndexToTop, left: "2.5%" }}
+      >
         <div className="footer_parentContainer tw-flex tw-flex-col tw-justify-end">
           <div className="footer__container tw-h-3/4 tw-w-full tw-flex tw-flex-row tw-mb-12 tw-mt-12 ">
             <Logo
@@ -39,13 +41,9 @@ const Footer: NextPage<Props> = ({}) => {
             />
 
             <FooterColumns />
-
-
           </div>
         </div>
       </div>
-
-     
     </>
   );
 };
