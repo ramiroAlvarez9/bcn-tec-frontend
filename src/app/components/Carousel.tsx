@@ -4,7 +4,7 @@ import { useRef } from "react";
 import useIsomorphicLayoutEffect from "@/helpers/useIsomorphicLayoutEffect";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectsImgLink from "./ProjectsImgLink";
-import marco1 from "../../../public/icons/marco_animado_1.json";
+import marco1 from "../../../public/icons/marco_1.json";
 import marco2 from "../../../public/icons/marco_animado_2.json";
 
 interface Props {}

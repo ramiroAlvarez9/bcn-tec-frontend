@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import marco1 from "../public/icons/marco_animado_1.json";
+import marco1 from "../public/icons/marco_1.json";
 import marco2 from "../public/icons/marco_animado_2.json";
 const Prueba = ({}) => {
   return (
