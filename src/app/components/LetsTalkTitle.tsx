@@ -1,8 +1,14 @@
 import Image from "next/image";
 import arrowTopRightColor from "../../../public/icons/flecha_send_color.svg";
 
+interface Props{
+  translateX: number;
+  translateY: number;
+  brightness: number;
+}
 
-const LetsTalkTitle = ({}) => {
+const LetsTalkTitle = ({translateX,translateY, brightness} : Props) => {
+  console.log(translateX,translateY)
   return (
     <div className="  lets-talk__container tw-w-4/5 tw-h-1/2 tw-flex tw-justify-between tw-items-center">
       <h3 className="lets-talk__title">
@@ -16,6 +22,13 @@ const LetsTalkTitle = ({}) => {
             src={arrowTopRightColor}
             alt="arrow-enter"
             className="tw-ml-6 arrowTopRight"
+            style={{
+              transition: "transform 0.5s, filter 1.5s",
+              transform: `translate(${translateX}px,${translateY}px)`,
+              filter: `brightness(${brightness}%)`,
+
+            }}
+            
           />
         </a>
       </div>

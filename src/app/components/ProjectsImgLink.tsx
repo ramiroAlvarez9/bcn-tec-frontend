@@ -5,16 +5,11 @@ import marco1 from "../../../public/icons/marco_1.json";
 import marco2 from "../../../public/icons/marco_animado_2.json";
 interface Props {
   title: string;
-  
-  link: string;
 
+  link: string;
 }
 
-const ProjectsImgLink = ({
-  title,
-  link,
-
-}: Props) => {
+const ProjectsImgLink = ({ title, link }: Props) => {
   return (
     <>
       {/*the class horizontal-panel complies with the objective of apply the gsap ScrollTrigger effect */}
@@ -24,7 +19,7 @@ const ProjectsImgLink = ({
             <div className="marco__carousel">
               <Link
                 href={link}
-                className="tw-absolute tw-z-40tw-h-full tw-w-full "
+                className="tw-absolute tw-z-50 tw-h-full tw-w-full "
               >
                 <Lottie animationData={marco1} loop={true} />
               </Link>
@@ -36,18 +31,18 @@ const ProjectsImgLink = ({
               className="tw-object-cover"
               fill
             />
-          </div>
 
-          <div className="title__container ">
-            <h4 className="project__title "> {title} </h4>
+            <div className="title__container ">
+              <h4 className="project__title "> {title} </h4>
+            </div>
           </div>
 
           <div className="project__image">
-            {/* */}
+
             <div className="marco__carousel2">
               <Link
                 href={link}
-                className="tw-absolute tw-z-40tw-h-full tw-w-full "
+                className="tw-absolute tw-z-50 tw-h-full tw-w-full "
               >
                 <Lottie animationData={marco2} loop={true} />
               </Link>
@@ -59,11 +54,15 @@ const ProjectsImgLink = ({
               className="tw-object-cover"
               fill
             />
-          </div>
 
-          <div className="title__container ">
-            <h4 className="project__title "> {title} </h4>
-          </div>
+            <div className="title__container ">
+              <h4 className="project__title "> {title} </h4>
+            </div>
+          
+        </div>
+
+
+
         </div>
       </div>
     </>

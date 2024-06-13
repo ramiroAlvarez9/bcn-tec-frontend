@@ -17,7 +17,6 @@ $bcn-logo: #6dfacc;
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 //menu section slide
@@ -156,6 +155,7 @@ html {
                     min-height: 190px;
                     max-width: 190px;
                     max-height: 190px;
+                    margin-top: 20%;
 
                     .link__marco {
                         position: absolute;
@@ -186,8 +186,7 @@ html {
                     height: auto;
                     display: flex;
                     justify-content: end;
-                    margin-top: 5%;
-                    margin-bottom: 10%;
+                    margin-top: 110%;
 
                     .project__title {
                         text-align: end;
@@ -266,6 +265,11 @@ html {
 //tablets
 @media (min-width: 768px) {
 
+    html {
+        overflow-x: hidden;
+    }
+
+
     #home__section {
         height: 60vh;
 
@@ -297,29 +301,35 @@ html {
                 background-color: $white;
 
                 .container__carousel {
+                    width: 90%;
+                    flex-direction: row;
+                    justify-content: space-between;
+
                     .project__image {
-                        width: 500px;
-                        height: 500px;
-                        max-width: 500px;
-                        max-height: 500px;
+                        width: 300px;
+                        height: 300px;
+                        max-width: 300px;
+                        max-height: 300px;
 
                         .marco__carousel {
-                            width: 610px;
-                            top: -120px;
-                            left: -72px;
+
+                            width: 365px;
+                            top: -70px;
+                            left: -45px;
                         }
 
                         .marco__carousel2 {
-                            width: 610px;
-                            top: -100px;
-                            left: -75px;
+
+                            width: 360px;
+                            top: -60px;
+                            left: -45px;
                         }
 
                     }
 
                     .title__container {
-                        width: 550px;
-                        max-width: 600px;
+                        width: 300px;
+                        max-width: 300px;
 
                         .bar-bottom {
                             background-color: $black;
@@ -328,7 +338,7 @@ html {
                         }
 
                         .project__title {
-                            font-size: 32px;
+                            font-size: 24px;
                             text-align: end;
 
                         }
@@ -402,22 +412,27 @@ html {
         .horizontal-section {
             .horizontal-panel {
                 .container__carousel {
-                    margin-top: 10%;
+                    width: 70%;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
 
                     .project__image {
-                        width: 200px;
-                        height: 200px;
-                        max-width: 200px;
-                        max-height: 200px;
+                        margin-top: 0;
+                        width: 250px;
+                        height: 250px;
+                        max-width: 250px;
+                        max-height: 250px;
+
 
                         .marco__carousel {
-                            width: 235px;
+                            width: 291px;
                             top: -50px;
                             left: -30px;
                         }
 
                         .marco__carousel2 {
-                            width: 240px;
+                            width: 291px;
                             top: -43px;
                             left: -30px;
 
@@ -555,22 +570,24 @@ html {
         .horizontal-section {
             .horizontal-panel {
                 .container__carousel {
+                    width: 75%;
+
                     .project__image {
-                        width: 545px;
-                        height: 555px;
-                        max-width: 545px;
-                        max-height: 555px;
+                        width: 400px;
+                        height: 400px;
+                        max-width: 400px;
+                        max-height: 400px;
 
                         .marco__carousel {
-                            width: 647px;
-                            top: -136px;
-                            left: -80px;
+                            width: 480px;
+                            top: -90px;
+                            left: -60px;
                         }
 
                         .marco__carousel2 {
-                            width: 647px;
-                            top: -115px;
-                            left: -78px;
+                            width: 480px;
+                            top: -80px;
+                            left: -60px;
 
 
                         }
@@ -580,9 +597,9 @@ html {
 
 
                     .title__container {
-                        width: 550px;
-                        max-width: 550px;
-                        margin-top: 2%;
+                        width: 400px;
+                        max-width: 400px;
+                        margin-top: 105%;
 
                         .bar-bottom {
                             background-color: $black;
@@ -622,7 +639,7 @@ html {
                 transition: transform 0.5s, filter 1.5s;
 
             }
-
+            
             .arrowTopRight:hover {
                 transform: translate(50px, -50px);
                 filter: brightness(300%);
@@ -670,5 +687,62 @@ html {
             }
         }
     }
+
+}
+
+//desktop
+@media (min-width: 1600px) {
+
+    #projects {
+        .horizontal-section {
+            .horizontal-panel {
+                .container__carousel {
+                    width: 60%;
+
+                    .project__image {
+                        width: 400px;
+                        height: 400px;
+                        max-width: 400px;
+                        max-height: 400px;
+
+                        .marco__carousel {
+                            width: 480px;
+                            top: -90px;
+                            left: -60px;
+                        }
+
+                        .marco__carousel2 {
+                            width: 480px;
+                            top: -80px;
+                            left: -60px;
+
+
+                        }
+                    }
+
+
+
+
+                    .title__container {
+                        width: 400px;
+                        max-width: 400px;
+                        margin-top: 105%;
+
+                        .bar-bottom {
+
+
+                        }
+
+                        .project__title {
+                            font-size: 24px;
+                            text-align: end;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 
 }
