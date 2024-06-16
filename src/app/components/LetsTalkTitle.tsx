@@ -8,7 +8,6 @@ interface Props{
 }
 
 const LetsTalkTitle = ({translateX,translateY, brightness} : Props) => {
-  console.log(translateX,translateY)
   return (
     <div className="  lets-talk__container tw-w-4/5 tw-h-1/2 tw-flex tw-justify-between tw-items-center">
       <h3 className="lets-talk__title">

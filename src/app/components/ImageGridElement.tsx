@@ -6,7 +6,7 @@ const ImageGridElement = ({}: Props) => {
     <>
       <div className="img tw-h-64 tw-w-full tw-relative ">
         <Image
-          src="https://perimeterinstitute.ca/sites/default/files/styles/hero_banner_small_1440x502/public/2020-11/WHAT_Centre_For_the_Universe.jpg"
+          src=""
           alt="image"
           className="tw-object-cover"
           layout="fill"

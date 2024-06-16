@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "contentful": "^10.12.0",
+    "dotenv": "^16.4.5",
     "hamburger-react": "^2.5.0",
     "lottie-react": "^2.4.0",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-loading": "^2.0.3",
     "sass": "^1.77.1",
     "styled-components": "^6.1.11",
     "yarn": "^1.22.22"

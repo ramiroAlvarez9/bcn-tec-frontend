@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: "perimeterinstitute.ca",
+        hostname: "images.ctfassets.net",
         pathname: '**',
       },
     ],
@@ -13,9 +13,5 @@ const nextConfig = {
 };
 
 
-
-
-
-// "https://pics.craiyon.com/2023-11-14/dTh6GhCgTK2OB_mBISa-gg.webp"
 
 export default nextConfig;

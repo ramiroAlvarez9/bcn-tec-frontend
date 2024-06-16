@@ -4,16 +4,17 @@ import { useRef } from "react";
 import useIsomorphicLayoutEffect from "@/helpers/useIsomorphicLayoutEffect";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectsImgLink from "./ProjectsImgLink";
-
-
-interface Props {}
+import { Entry, EntrySkeletonType } from "contentful/dist/types/types";
+import ReactLoading from "react-loading";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
+interface Props {
+  proyectos: Promise<Entry<EntrySkeletonType, undefined, string>[]> | any;
+}
 
-const Carousel  = ({} : Props) => {
-
+export default function Carousel({ proyectos }: Props) {
   const horizontalSection = useRef<any>();
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -30,21 +31,39 @@ const Carousel  = ({} : Props) => {
         },
       });
     }, horizontalSection);
+
     return () => ctx.revert();
   }, []);
+
+  const counterLengthProjects: number[] = Array.from(
+    Array(Math.round(proyectos.length / 2)).keys()
+  );
+
+
+  const listOfProjects = counterLengthProjects.map( (index: number) => {
+
+    const proyecto1 = proyectos[index * 2];
+    const proyecto2 = proyectos[index * 2 + 1];
+  
+    return (
+      <ProjectsImgLink
+        proyecto1={[proyecto1]}
+        proyecto2={proyecto2 ? [proyecto2] : []}
+        key={index}
+      />
+    );
+  });
+
 
   return (
     <>
       <section className="horizontal-section" ref={horizontalSection}>
-                        
-        <ProjectsImgLink   link = "/projects/1" title="Altius Sky Project 1" />
-        
-        <ProjectsImgLink   link = "/projects/2" title="Altius Sky Project 2" />
-    
+        {proyectos === undefined ? (
+          <ReactLoading type={"balls"} height={"20%"} width={"20%"} />
+        ) : (
+          listOfProjects
+        )}
       </section>
-    
     </>
   );
-};
-
-export default Carousel;
+}

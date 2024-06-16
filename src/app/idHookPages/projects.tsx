@@ -1,17 +1,26 @@
-import { NextPage } from "next";
 import Carousel from "../components/Carousel";
-interface Props {}
+import {getProjectsFromContentful} from '../../../contentful/utils/contentful';
 
-const Projects: NextPage<Props> = ({}) => {
+const Projects = async () => {
+
+  const response = await getProjectsFromContentful();
+
   return (
     <>
       <main id="projects">
       
-      < Carousel />
+      < Carousel 
+
+        proyectos={response}
+      
+
+      />
 
       </main>
     </>
   );
 };
+
+
 
 export default Projects;
