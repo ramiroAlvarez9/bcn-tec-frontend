@@ -2,8 +2,9 @@ import { createClient } from 'contentful';
 
 export const createContentClient = () => {
   return createClient({
-    space:  "dc1sfegiuqtu",
-    accessToken: "84iCAXa_qiGeWTRr3IZIVUBntR7Rz2KJkkVGvDwPDU8",
+    
+    space:  process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   })
 }
 const client = createContentClient()
@@ -20,11 +21,12 @@ export const getProjectsFromContentful = async () => {
   const results = await getEntriesByType('proyectos')
   return results;
 }
-export const getEntryById = async (slug, type) => {
+export const getEntryBySlug = async (slug, type) => {
+  
   const queryOptions = {
     content_type: type,
     'fields.slug[match]': slug,
   }
   const queryResult = await client.getEntries(queryOptions)
-  return queryResult.items[0]
+  return queryResult.items[0];
 }

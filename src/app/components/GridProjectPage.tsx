@@ -1,20 +1,64 @@
 import ParagraphGridElement from "./ParagraphGridElement";
 import ImageGridElement from "./ImageGridElement";
+import YoutubeEmbed from "./YoutubeVideoIframe";
 
-interface Props {}
+interface ContentfulFile {
+  url: string;
+}
 
-const GridProjectPage = ({}: Props) => {
+interface ContentfulImage {
+  fields: {
+    file: ContentfulFile;
+  };
+}
+
+interface Props {
+
+  imagenes : ContentfulImage[];
+  descripcionDelProyecto: string;
+  videoDeYoutube: string ;
+}
+
+const GridProjectPage = ({imagenes, descripcionDelProyecto, videoDeYoutube}: Props) => {
+
+
+  const listOfGridImages = 
+    imagenes.map( (img : any ,index : number) => 
+    { 
+      return (
+        <ImageGridElement 
+          imagen= {img.fields.file.url}
+          key = {index}
+        />
+      );
+      
+    });
+
+
   return (
     <div className="grid tw-mt-8 ">
-      <ParagraphGridElement />
+      <ParagraphGridElement 
+        paragraph= {descripcionDelProyecto}
 
-      <ImageGridElement />
+      />
+    
+    {
+      videoDeYoutube !== undefined ?
+      (
+        < YoutubeEmbed 
+          embedId={videoDeYoutube}
+        />
+      ):
+      ( 
+        null 
+      )
 
-      <ImageGridElement />
-
-      <ImageGridElement />
-
-      <ImageGridElement />
+    }
+    {
+      listOfGridImages
+    
+    }
+    
     </div>
   );
 };

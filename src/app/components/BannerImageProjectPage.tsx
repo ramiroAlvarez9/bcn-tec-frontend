@@ -1,13 +1,19 @@
 import Image from "next/image";
-interface Props {}
+interface Props {
 
-const BannerImageProjectPage = ({}: Props) => {
+  imagen: any;
+
+}
+
+const BannerImageProjectPage = ({imagen}: Props) => {
+
+  console.log(imagen);
   return (
-    <div className="banner__image tw-border tw-border-solid tw-h-64 tw-relative">
+    <div className="banner__container tw-border tw-border-solid tw-h-64 tw-relative">
       <Image
-        src=""
+        src= {`https:${imagen}`}
         alt="image"
-        className="tw-object-cover"
+        className="tw-object-cover banner__image"
         layout="fill"
       />
     </div>

@@ -11,12 +11,12 @@ const Header  = ({} : Props ) => {
       <header className="tw-h-1/3 tw-w-full tw-flex tw-flex-row tw-justify-between  ">
         
         <div className="logo__container tw-h-full tw-w-1/3">
-            <Image
-              src={logoHeader}
-              width={75}
-              height={75}
-              alt="logo"
-              className="tw-mt-8 tw-ml-8 "
+          <Image
+            src={logoHeader}
+            width={75}
+            height={75}
+            alt="logo"
+            className="tw-mt-8 tw-ml-8 "
             />
         </div>
 
