@@ -121,6 +121,6 @@ Projectpage.getInitialProps = async () => {
   };
   const proyectos = await getEntriesByType("proyectos");
   return { proyectos };
-};
+};  
 
 export default Projectpage;
