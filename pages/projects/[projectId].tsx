@@ -4,9 +4,9 @@ import TitleProjectPage from "@/app/components/TitleProjectPage";
 import BannerImageProjectPage from "@/app/components/BannerImageProjectPage";
 import GridProjectPage from "@/app/components/GridProjectPage";
 import { useRouter } from "next/router";
-import { getEntriesByType } from "../../contentful/utils/contentful";
 import { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
+import { createClient } from "contentful";
 
 interface ContentfulFile {
   url: string;
@@ -58,11 +58,7 @@ const Projectpage = ({ proyectos }: Props) => {
 
   useEffect(() => {
     getProyectosById();
-  }, []);
-
-  if (proyectoPorId?.fields !== undefined) {
-    console.log(proyectoPorId.fields);
-  }
+  }, [router.query.projectId]);
 
   return (
     <>
@@ -100,6 +96,29 @@ const Projectpage = ({ proyectos }: Props) => {
 };
 
 Projectpage.getInitialProps = async () => {
+  const createContentClient = () => {
+    const space = process.env.CONTENTFUL_SPACE_ID;
+    const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
+
+    if (!space || !accessToken) {
+      throw new Error(
+        "space or access token are undefined"
+      );
+    }
+    return createClient({
+      space: space,
+      accessToken: accessToken,
+    });
+  };
+  const client = createContentClient();
+
+  const getEntriesByType = async (type: any) => {
+    const response = await client.getEntries({
+      content_type: type,
+    });
+
+    return response.items;
+  };
   const proyectos = await getEntriesByType("proyectos");
   return { proyectos };
 };

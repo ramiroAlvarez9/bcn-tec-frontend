@@ -10,10 +10,7 @@ const Projects = async () => {
       <main id="projects">
       
       < Carousel 
-
         proyectos={response}
-      
-
       />
 
       </main>

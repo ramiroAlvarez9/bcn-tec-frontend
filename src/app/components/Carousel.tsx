@@ -34,11 +34,10 @@ export default function Carousel({ proyectos }: Props) {
 
     return () => ctx.revert();
   }, []);
-
+  
   const counterLengthProjects: number[] = Array.from(
     Array(Math.round(proyectos.length / 2)).keys()
   );
-
 
   const listOfProjects = counterLengthProjects.map( (index: number) => {
 
