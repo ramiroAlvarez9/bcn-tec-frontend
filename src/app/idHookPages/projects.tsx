@@ -3,7 +3,7 @@ import {getProjectsFromContentful} from './contentful/utils/contentful';
 
 const Projects = async () => {
 
-  const spaceId = process.env.CONTENTFUL_SPACE_ID;
+  const spaceId = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
   const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
   const response = await getProjectsFromContentful(spaceId,accessToken,"proyectos");
 
