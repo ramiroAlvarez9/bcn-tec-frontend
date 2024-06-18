@@ -3,7 +3,9 @@ import {getProjectsFromContentful} from './contentful/utils/contentful';
 
 const Projects = async () => {
 
-  const response = await getProjectsFromContentful();
+  const spaceId = process.env.CONTENTFUL_SPACE_ID;
+  const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
+  const response = await getProjectsFromContentful(spaceId,accessToken,"proyectos");
 
   return (
     <>
@@ -18,6 +20,6 @@ const Projects = async () => {
   );
 };
 
-
+ 
 
 export default Projects;

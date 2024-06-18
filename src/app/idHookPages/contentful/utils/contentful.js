@@ -6,7 +6,6 @@ export const createContentClient = () => {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 };
-const client = createContentClient();
 
 export const getEntriesByType = async (type) => {
   const response = await client.getEntries({
@@ -16,10 +15,22 @@ export const getEntriesByType = async (type) => {
   return response.items;
 };
 
-export const getProjectsFromContentful = async () => {
-  const results = await getEntriesByType("proyectos");
-  return results;
+export const getProjectsFromContentful = async (SPACE_ID, CONTENTFUL_ACCESS_TOKEN, type) => {
+  const client = createClient({
+    space: SPACE_ID,
+    accessToken: CONTENTFUL_ACCESS_TOKEN,
+  });
+
+
+  const response = await client.getEntries({
+    content_type: type,
+  });
+
+  return response.items;
+
+
 };
+
 export const getEntryBySlug = async (slug, type) => {
   const queryOptions = {
     content_type: type,
