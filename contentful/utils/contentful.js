@@ -3,7 +3,7 @@ import { createClient } from 'contentful';
 export const createContentClient = () => {
   return createClient({
     
-    space:  process.env.CONTENTFUL_SPACE_ID,
+    space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   })
 }
@@ -13,8 +13,11 @@ export const getEntriesByType = async (type) => {
   const response = await client.getEntries({
     content_type: type,
   })
-
+  console.log(process.env.CONTENTFUL_SPACE_ID)
+  console.log(process.env.CONTENTFUL_ACCESS_TOKEN)
   return response.items
+  
+  
 }
 
 export const getProjectsFromContentful = async () => {
