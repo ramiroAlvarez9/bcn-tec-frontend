@@ -39,3 +39,15 @@ export const getEntryBySlug = async (slug, type) => {
   const queryResult = await client.getEntries(queryOptions);
   return queryResult.items[0];
 };
+
+
+const Prueba = () => {
+  
+  return (
+    <>
+
+    </>
+  );
+};
+
+export default Prueba;

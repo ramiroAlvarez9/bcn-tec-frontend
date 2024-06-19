@@ -1,5 +1,5 @@
 import Carousel from "../src/app/components/Carousel";
-import { getProjectsFromContentful } from "../contentful/utils/contentful";
+import { getProjectsFromContentful } from "./contentful/utils/contentful";
 import "../src/app/globals.scss";
 import { createClient } from "contentful";
 
