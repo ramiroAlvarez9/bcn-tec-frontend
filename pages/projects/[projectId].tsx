@@ -4,7 +4,7 @@ import TitleProjectPage from "@/app/components/TitleProjectPage";
 import BannerImageProjectPage from "@/app/components/BannerImageProjectPage";
 import GridProjectPage from "@/app/components/GridProjectPage";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from 'react';
 import ReactLoading from "react-loading";
 import { createClient } from "contentful";
 
@@ -42,24 +42,20 @@ interface Props {
 }
 
 const Projectpage = ({ proyectos }: Props) => {
-  const [proyectoPorId, setProyectoPorId] = useState<ContentfulProject | null>(
-    null
-  );
+  const [proyectoPorId, setProyectoPorId] = useState<ContentfulProject | null>(null);
 
   const router = useRouter();
 
-  const getProyectosById = () => {
+  const getProyectosById = useCallback(() => {
     const proyectoById = proyectos.filter(
-      (proyecto: ContentfulProject) =>
-        proyecto.fields.idProyecto == router.query.projectId
+      (proyecto: ContentfulProject) => proyecto.fields.idProyecto == router.query.projectId
     );
     setProyectoPorId(proyectoById[0] || null);
-  };
+  }, [proyectos, router.query.projectId]);
 
   useEffect(() => {
     getProyectosById();
-  }, [router.query.projectId, getProyectosById]);
-
+  }, [getProyectosById]);
   return (
     <>
       {proyectoPorId?.fields === undefined ? (
