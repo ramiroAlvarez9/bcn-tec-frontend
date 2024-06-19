@@ -10,7 +10,6 @@ export default function Home() {
     <>
       <MainPage />
       <About />
-      <Projects />
       <LetsTalk />
       <FooterSpace />
       < FooterUpArrow />
