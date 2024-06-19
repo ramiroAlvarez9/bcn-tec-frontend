@@ -1,13 +1,10 @@
 import Carousel from "../components/Carousel";
-import {getProjectsFromContentful} from '../../../pages/contentful/utils/contentful';
+import {getProjectsFromContentful} from '../../../contentful/utils/contentful';
 
 const Projects = async () => {
 
-  const spaceId = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
-  const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
-
-  const response = await getProjectsFromContentful(spaceId,accessToken,"proyectos");
-
+  const response = await getProjectsFromContentful()
+  
   return (
     <>
       <main id="projects">

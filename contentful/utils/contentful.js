@@ -2,10 +2,12 @@ import { createClient } from "contentful";
 
 export const createContentClient = () => {
   return createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
+    space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
     accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
   });
 };
+
+const client = createContentClient();
 
 export const getEntriesByType = async (type) => {
   const response = await client.getEntries({
@@ -15,13 +17,7 @@ export const getEntriesByType = async (type) => {
   return response.items;
 };
 
-export const getProjectsFromContentful = async (SPACE_ID, CONTENTFUL_ACCESS_TOKEN, type) => {
-  const client = createClient({
-    space: SPACE_ID,
-    accessToken: CONTENTFUL_ACCESS_TOKEN,
-  });
-
-
+export const getProjectsFromContentful = async ( type) => {
   const response = await client.getEntries({
     content_type: type,
   });
