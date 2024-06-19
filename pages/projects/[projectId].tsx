@@ -44,7 +44,7 @@ interface Props {
 const Projectpage = ({ proyectos }: Props) => {
   const [proyectoPorId, setProyectoPorId] = useState<ContentfulProject | null>(null);
 
-  const router = useRouter();
+  const router = useRouter()
 
   const getProyectosById = useCallback(() => {
     const proyectoById = proyectos.filter(
