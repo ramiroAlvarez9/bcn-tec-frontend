@@ -1,5 +1,5 @@
 import Carousel from "../components/Carousel";
-import {getProjectsFromContentful} from './contentful/utils/contentful';
+import {getProjectsFromContentful} from '../../../pages/contentful/utils/contentful';
 
 const Projects = async () => {
 
