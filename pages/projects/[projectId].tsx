@@ -58,7 +58,7 @@ const Projectpage = ({ proyectos }: Props) => {
 
   useEffect(() => {
     getProyectosById();
-  }, [router.query.projectId]);
+  }, [router.query.projectId, getProyectosById]);
 
   return (
     <>
