@@ -93,8 +93,8 @@ const Projectpage = ({ proyectos }: Props) => {
 
 Projectpage.getInitialProps = async () => {
   const createContentClient = () => {
-    const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID;
-    const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN;
+    const space = process.env.CONTENTFUL_SPACE_ID;
+    const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN;
 
     if (!space || !accessToken) {
       throw new Error(
