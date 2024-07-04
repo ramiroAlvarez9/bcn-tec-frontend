@@ -18,8 +18,8 @@ const LetsTalk: NextPage<Props> = ({}) => {
         className="tw-flex tw-flex-col tw-items-center tw-justify-center"
         onMouseEnter={() => {
           if (window.innerWidth > 1200) {
-            setTranslateXArrow(50);
-            setTranslateYArrow(-50);
+            setTranslateXArrow(10);
+            setTranslateYArrow(-10);
             setBrightness(300);
           }
           

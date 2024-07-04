@@ -50,7 +50,7 @@ const Slide = ({ isOpen, slideMenuPositionX, closeTheMenu, setOpen  } : Props ) 
 
           <div className="links__container tw-ml-12 tw-w-3/4 tw-flex tw-flex-col tw-justify-center">
             <Link
-              className="tw-w-1/2"
+              className="tw-w-1/2 link__container--a"
               href="/"
               onClick={() => {
                 closeTheMenu;
