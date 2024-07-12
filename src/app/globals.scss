@@ -2,16 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-//pallete of colors 
+//pallete of colors
 $black: #010100;
 $white: #fffefe;
 $bcn-logo: #6dfacc;
 
-/* 
-    -- 
-        Define global , 
+/*
+    --
+        Define global ,
         structural styles for project:
-        (width and height for all views, colors and background colors, responsive media querys) 
+        (width and height for all views, colors and background colors, responsive media querys)
     --
 */
 
@@ -159,11 +159,16 @@ html {
             background-color: $white;
 
             .container__carousel {
-                width: 100%;
+                /*width: 100%;
                 height: 75%;
                 display: flex;
                 flex-direction: column;
+                align-items: center;*/
+                width: 100%;
+                display: flex;
+                flex-direction: column;
                 align-items: center;
+                justify-content: space-around;
 
 
 
@@ -207,6 +212,7 @@ html {
                     margin-top: 110%;
 
                     .project__title {
+                        margin-top: 10px;
                         text-align: end;
                         font-weight: 200;
                         font-size: 14px;
@@ -319,9 +325,14 @@ html {
                 background-color: $white;
 
                 .container__carousel {
-                    width: 90%;
+                   /* width: 90%;
                     flex-direction: row;
-                    justify-content: space-between;
+                    justify-content: space-between;*/
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
 
                     .project__image {
                         width: 300px;
@@ -427,10 +438,15 @@ html {
         .horizontal-section {
             .horizontal-panel {
                 .container__carousel {
-                    width: 70%;
+                    /*width: 82%;
                     flex-direction: row;
                     align-items: center;
-                    justify-content: space-between;
+                    justify-content: space-between;*/
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
 
                     .project__image {
                         margin-top: 0;
@@ -537,7 +553,7 @@ html {
             .img__handler {
                 height: 150px;
                 width: 150px;
-            }    
+            }
         }
     }
 
@@ -592,7 +608,8 @@ html {
         .horizontal-section {
             .horizontal-panel {
                 .container__carousel {
-                    width: 75%;
+                    width: 100%;
+                   /* width: 75%;*/
 
                     .project__image {
                         width: 400px;
@@ -694,6 +711,7 @@ html {
 
         .slide__itemsContainer {
 
+
             .icons__container {
                 .icons {
                     width: 20%;
@@ -705,6 +723,11 @@ html {
                 align-items: start;
                 font-size: 10rem;
                 letter-spacing: 20px;
+
+
+                .link__container--a {
+
+                }
 
             }
         }
@@ -719,7 +742,8 @@ html {
         .horizontal-section {
             .horizontal-panel {
                 .container__carousel {
-                    width: 60%;
+                    width: 100%;
+                   /* width: 60%;*/
 
                     .project__image {
                         width: 400px;

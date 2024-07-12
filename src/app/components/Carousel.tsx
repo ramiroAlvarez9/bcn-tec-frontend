@@ -34,7 +34,7 @@ export default function Carousel({ proyectos }: Props) {
 
     return () => ctx.revert();
   }, []);
-  
+
   const counterLengthProjects: number[] = Array.from(
     Array(Math.round(proyectos.length / 2)).keys()
   );
@@ -43,7 +43,7 @@ export default function Carousel({ proyectos }: Props) {
 
     const proyecto1 = proyectos[index * 2];
     const proyecto2 = proyectos[index * 2 + 1];
-  
+
     return (
       <ProjectsImgLink
         proyecto1={[proyecto1]}
@@ -53,12 +53,12 @@ export default function Carousel({ proyectos }: Props) {
     );
   });
 
-
+//proyectos === undefined
   return (
     <>
       <section className="horizontal-section" ref={horizontalSection}>
         {proyectos === undefined ? (
-          <ReactLoading type={"balls"} height={"20%"} width={"20%"} />
+          <ReactLoading type={"spin"} height={50} width={50} />
         ) : (
           listOfProjects
         )}

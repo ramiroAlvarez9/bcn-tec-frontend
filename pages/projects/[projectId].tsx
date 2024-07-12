@@ -56,15 +56,17 @@ const Projectpage = ({ proyectos }: Props) => {
   useEffect(() => {
     getProyectosById();
   }, [getProyectosById]);
+
+
   return (
     <>
       {proyectoPorId?.fields === undefined ? (
         <div className="loading__container tw-h-screen tw-w-screen tw-flex tw-items-center tw-justify-center">
           <ReactLoading
-            type={"balls"}
+            type={"spin"}
             color={"#6dfacc"}
-            height={300}
-            width={300}
+            height={40}
+            width={40}
           />
         </div>
       ) : (
@@ -117,6 +119,6 @@ Projectpage.getInitialProps = async () => {
   };
   const proyectos = await getEntriesByType("proyectos");
   return { proyectos };
-};  
+};
 
 export default Projectpage;
