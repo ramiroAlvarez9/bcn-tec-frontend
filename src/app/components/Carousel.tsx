@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { useRef } from "react";
 import useIsomorphicLayoutEffect from "@/helpers/useIsomorphicLayoutEffect";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import ProjectsImgLink from "./ProjectsImgLink";
+import ProjectsImgLinkWithTwoElements from "./ProjectsImgLinkWithTwoElements";
 import { Entry, EntrySkeletonType } from "contentful/dist/types/types";
 import ReactLoading from "react-loading";
 
@@ -39,21 +39,33 @@ export default function Carousel({ proyectos }: Props) {
     Array(Math.round(proyectos.length / 2)).keys()
   );
 
-  const listOfProjects = counterLengthProjects.map( (index: number) => {
+  const listOfProjects =
 
-    const proyecto1 = proyectos[index * 2];
-    const proyecto2 = proyectos[index * 2 + 1];
+  window.matchMedia("(min-width: 768)").matches ?
+    
+    (
+      counterLengthProjects.map((index: number) => {
 
-    return (
-      <ProjectsImgLink
-        proyecto1={[proyecto1]}
-        proyecto2={proyecto2 ? [proyecto2] : []}
-        key={index}
-      />
+      const proyecto1 = proyectos[index * 2];
+      const proyecto2 = proyectos[index * 2 + 1];
+
+      return (
+        <ProjectsImgLinkWithTwoElements
+          proyecto1={[proyecto1]}
+          proyecto2={proyecto2 ? [proyecto2] : []}
+          key={index}
+        />
+      );
+
+      
+      })
+    )
+    :
+    (
+      null
     );
-  });
+  
 
-//proyectos === undefined
   return (
     <>
       <section className="horizontal-section" ref={horizontalSection}>

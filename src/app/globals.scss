@@ -44,13 +44,6 @@ html {
     width: 100vw;
 
 
-
-
-
-
-
-
-
     .h1__title {
         overflow: hidden;
         /* Ensures the content is not revealed until the animation */
@@ -159,11 +152,6 @@ html {
             background-color: $white;
 
             .container__carousel {
-                /*width: 100%;
-                height: 75%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;*/
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -245,7 +233,7 @@ html {
 
         .lets-talk__title {
             font-weight: 100;
-            font-size: 3rem;
+            font-size: 2.5rem;
             letter-spacing: 0.2rem;
         }
 
@@ -278,8 +266,8 @@ html {
     height: auto;
     position: fixed;
     z-index: 9;
-    left: 95%;
-    top: 85%;
+    left: 93%;
+    top: 82%;
 }
 
 .space {
@@ -325,9 +313,6 @@ html {
                 background-color: $white;
 
                 .container__carousel {
-                   /* width: 90%;
-                    flex-direction: row;
-                    justify-content: space-between;*/
                     width: 100%;
                     display: flex;
                     flex-direction: row;
@@ -438,10 +423,6 @@ html {
         .horizontal-section {
             .horizontal-panel {
                 .container__carousel {
-                    /*width: 82%;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;*/
                     width: 100%;
                     display: flex;
                     flex-direction: row;
@@ -541,15 +522,25 @@ html {
         }
     }
 
+.upArrowContainer {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    position: fixed;
+    z-index: 9;
+    left: 95%;
+    top: 85%;
 }
 
+
+}
 
 //desktop
 @media (min-width: 1200px) {
 
     .header {
 
-        .h-logo__container{
+        .h-logo__container {
             .img__handler {
                 height: 150px;
                 width: 150px;
@@ -609,7 +600,7 @@ html {
             .horizontal-panel {
                 .container__carousel {
                     width: 100%;
-                   /* width: 75%;*/
+                    /* width: 75%;*/
 
                     .project__image {
                         width: 400px;
@@ -725,9 +716,7 @@ html {
                 letter-spacing: 20px;
 
 
-                .link__container--a {
-
-                }
+                .link__container--a {}
 
             }
         }
@@ -743,7 +732,7 @@ html {
             .horizontal-panel {
                 .container__carousel {
                     width: 100%;
-                   /* width: 60%;*/
+                    /* width: 60%;*/
 
                     .project__image {
                         width: 400px;

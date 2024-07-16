@@ -9,7 +9,7 @@ interface Props {
   proyecto2: object[] | undefined | any;
 }
 
-const ProjectsImgLink = ({ proyecto1, proyecto2 }: Props) => {
+const ProjectsImgLinkWithTwoElements = ({ proyecto1, proyecto2 }: Props) => {
   const arrayOfProjects = proyecto1.concat(proyecto2);
 
   const marcoAnimations = [marco1, marco2];
@@ -67,4 +67,4 @@ const ProjectsImgLink = ({ proyecto1, proyecto2 }: Props) => {
   );
 };
 
-export default ProjectsImgLink;
+export default ProjectsImgLinkWithTwoElements;
