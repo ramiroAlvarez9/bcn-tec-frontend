@@ -12,9 +12,6 @@ interface Props {
 
 const ProjectsImgLinkWithOneElement = ({ project, index }: Props) => {
 
-    let marcoAnimation               =  index % 2 === 0 ? marco1 : marco2;
-    let marcoClassNameValue : number = index % 2 === 0 ? 1 : 2;
-
 
     return (
         <>
@@ -22,14 +19,14 @@ const ProjectsImgLinkWithOneElement = ({ project, index }: Props) => {
             <div className="horizontal-panel tw-flex tw-flex-col tw-justify-center tw-items-center" key={index}>
                 <div className="container__carousel " key={index}>
                     <div className="project__image" key={index}>
-                        <div className={`marco__carousel${marcoClassNameValue}`} key={index}>
+                        <div className={`marco__carousel${index % 2 === 0 ? 1 : 2}`} key={index}>
                             <Link
                                 href={`projects/${project.fields.idProyecto}`}
                                 className="tw-absolute tw-z-50 tw-h-full tw-w-full"
                                 key={index}
                             >
                                 <Lottie
-                                    animationData={marcoAnimation}
+                                    animationData={index % 2 === 0 ? marco1 : marco2}
                                     loop={true}
                                     key={index}
                                 />

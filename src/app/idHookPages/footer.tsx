@@ -9,11 +9,9 @@ interface Props {}
 const Footer: NextPage<Props> = ({}) => {
   return (
     <>
-      <div
-        id="footer"
-        style={{ position: "fixed", zIndex: -1, left: "2.5%" }}
-      >
-        <div className="footer_parentContainer tw-flex tw-flex-col tw-justify-end">
+      <div id="footer">
+        <div className="footer_parentContainer tw-flex tw-flex-col tw-justify-end"
+        >
           <div className="footer__container tw-h-3/4 tw-w-full tw-flex tw-flex-row tw-mb-12 tw-mt-12 ">
             <Logo
               svgImage={logoFooter}

@@ -1,5 +1,4 @@
 import Footer from "../idHookPages/footer";
-import dynamic from 'next/dynamic'
 
 
 const FooterSpace = ({}) => {
