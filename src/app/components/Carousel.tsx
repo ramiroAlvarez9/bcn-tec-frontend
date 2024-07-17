@@ -74,11 +74,13 @@ export default function Carousel({ proyectos }: Props) {
                 );
               })
             ) : (
-              proyectos.map((p: any, key: number) => (
+              proyectos.map((p: any, index: number) => (
+
                 <ProjectsImgLinkWithOneElement
                   project={p}
-                  key={key}
+                  index={index}
                 />
+
               ))
             )
           )}
