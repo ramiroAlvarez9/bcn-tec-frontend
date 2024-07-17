@@ -1,5 +1,8 @@
-import Carousel from "../components/Carousel";
 import {getProjectsFromContentful} from '../../../contentful/utils/contentful';
+import dynamic from 'next/dynamic'
+
+
+const Carousel = dynamic(() => import('../components/Carousel'), { ssr: false })
 
 const Projects = async () => {
 

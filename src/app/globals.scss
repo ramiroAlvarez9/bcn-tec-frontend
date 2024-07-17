@@ -18,7 +18,10 @@ $bcn-logo: #6dfacc;
 html {
     scroll-behavior: smooth;
 }
-
+body{
+    position: relative;
+    z-index: -2;
+}
 //menu section slide
 .slide {
     font-weight: 350;
@@ -271,6 +274,8 @@ html {
 }
 
 .space {
+    position: relative;
+    z-index: -2;
     height: 20vh;
 }
 
@@ -500,9 +505,6 @@ html {
         background-color: $white;
         font-size: 3rem;
         letter-spacing: 3px;
-    }
-
-    .slide {
         font-weight: 350;
         background-color: $white;
         font-size: 3.5rem;

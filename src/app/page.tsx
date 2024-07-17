@@ -5,6 +5,8 @@ import LetsTalk from "./idHookPages/lets-talk";
 import FooterSpace from "./components/FooterSpace";
 import FooterUpArrow from "./components/FooterUpArrow";
 
+
+
 export default function Home() {
   return (
     <>

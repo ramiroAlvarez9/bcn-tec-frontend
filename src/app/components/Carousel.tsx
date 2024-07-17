@@ -4,18 +4,27 @@ import { useRef } from "react";
 import useIsomorphicLayoutEffect from "@/helpers/useIsomorphicLayoutEffect";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectsImgLinkWithTwoElements from "./ProjectsImgLinkWithTwoElements";
+import ProjectsImgLinkWithOneElement from "../ProjectsWithOneElement";
 import { Entry, EntrySkeletonType } from "contentful/dist/types/types";
 import ReactLoading from "react-loading";
 
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(ScrollTrigger);
-}
+
 interface Props {
   proyectos: Promise<Entry<EntrySkeletonType, undefined, string>[]> | any;
 }
 
+
 export default function Carousel({ proyectos }: Props) {
+
+
+  /*---   GSAP EFFECT   ---*/
+
+  const isWindowEnable = () => typeof window !== "undefined";
+
+  if (isWindowEnable()) gsap.registerPlugin(ScrollTrigger);
+
   const horizontalSection = useRef<any>();
+
   useIsomorphicLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const slides = gsap.utils.toArray(".horizontal-panel");
@@ -35,46 +44,46 @@ export default function Carousel({ proyectos }: Props) {
     return () => ctx.revert();
   }, []);
 
+  /*---   END GSAP EFFECT   ---*/
+
+
   const counterLengthProjects: number[] = Array.from(
     Array(Math.round(proyectos.length / 2)).keys()
   );
 
-  const listOfProjects =
 
-  window.matchMedia("(min-width: 768)").matches ?
-    
-    (
-      counterLengthProjects.map((index: number) => {
-
-      const proyecto1 = proyectos[index * 2];
-      const proyecto2 = proyectos[index * 2 + 1];
-
-      return (
-        <ProjectsImgLinkWithTwoElements
-          proyecto1={[proyecto1]}
-          proyecto2={proyecto2 ? [proyecto2] : []}
-          key={index}
-        />
-      );
-
-      
-      })
-    )
-    :
-    (
-      null
-    );
-  
 
   return (
     <>
       <section className="horizontal-section" ref={horizontalSection}>
-        {proyectos === undefined ? (
-          <ReactLoading type={"spin"} height={50} width={50} />
-        ) : (
-          listOfProjects
-        )}
+        {
+          proyectos === undefined  ? (
+            <ReactLoading type={"spin"} height={50} width={50} />
+          ) : (
+            window.matchMedia("(min-width: 768px)").matches ? (
+
+              counterLengthProjects.map((index: number) => {
+                const proyecto1 = proyectos[index * 2];
+                const proyecto2 = proyectos[index * 2 + 1];
+                return (
+                  <ProjectsImgLinkWithTwoElements
+                    proyecto1={[proyecto1]}
+                    proyecto2={proyecto2 ? [proyecto2] : []}
+                    key={index}
+                  />
+                );
+              })
+            ) : (
+              proyectos.map((p: any, key: number) => (
+                <ProjectsImgLinkWithOneElement
+                  project={p}
+                  key={key}
+                />
+              ))
+            )
+          )}
       </section>
     </>
+
   );
 }

@@ -1,10 +1,12 @@
 import Footer from "../idHookPages/footer";
+import dynamic from 'next/dynamic'
 
-interface Props {}
 
 const FooterSpace = ({}) => {
   return (
-    <footer className = "space">
+    <footer className = "space"
+      
+    >
       <Footer />
     </footer>
   );
