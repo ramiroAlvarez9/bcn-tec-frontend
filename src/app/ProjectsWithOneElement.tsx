@@ -6,7 +6,7 @@ import marco2 from "../../public/icons/marco_animado_2.json";
 import Projects from './idHookPages/projects';
 
 interface Props {
-    project: Object;
+    project: any;
     key: number;
 }
 
