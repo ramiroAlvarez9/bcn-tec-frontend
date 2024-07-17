@@ -69,7 +69,6 @@ export default function Carousel({ proyectos }: Props) {
                   <ProjectsImgLinkWithTwoElements
                     proyecto1={[proyecto1]}
                     proyecto2={proyecto2 ? [proyecto2] : []}
-                    key={index}
                   />
                 );
               })
