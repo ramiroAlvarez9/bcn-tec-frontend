@@ -9,6 +9,7 @@ import AboutParagraph from "../components/AboutParagraph";
 interface Props {}
 
 const About: NextPage<Props> = ({}) => {
+  
   const [clickOnTitle, setClickOnTitle] = useState<boolean>(false);
   const [opacityParagraph, setOpacityParagraph] = useState<number>(0);
   const [opacityTitle, setOpacityTitle] = useState<number>(1);

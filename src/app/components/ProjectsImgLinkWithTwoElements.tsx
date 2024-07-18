@@ -40,8 +40,10 @@ const ProjectsImgLinkWithTwoElements = ({ proyecto1, proyecto2 }: Props) => {
               src={`https:${project.fields.imagenPrincipal.fields.file.url}`}
               alt=""
               className="tw-object-cover"
-              fill
               key={index}
+              fill 
+              sizes="@media (min-width: 768px) 300px,@media (orientation: landscape) 250px, @media (min-width: 1200px) 400px, @media (min-width: 1600px) 400px"
+
             />
 
             <div className="title__container" key={index}>

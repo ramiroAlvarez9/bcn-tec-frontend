@@ -4,7 +4,7 @@ import { useRef } from "react";
 import useIsomorphicLayoutEffect from "@/helpers/useIsomorphicLayoutEffect";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ProjectsImgLinkWithTwoElements from "./ProjectsImgLinkWithTwoElements";
-import ProjectsImgLinkWithOneElement from "../ProjectsWithOneElement";
+import ProjectsImgLinkWithOneElement from "./ProjectsWithOneElement";
 import { Entry, EntrySkeletonType } from "contentful/dist/types/types";
 import ReactLoading from "react-loading";
 

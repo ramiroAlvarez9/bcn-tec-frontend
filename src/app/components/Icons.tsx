@@ -24,7 +24,8 @@ const Icons = ({ arrayOfIcons, tailwindImgProperties, tailwindParentDivPropertie
               href={icon.link}
               rel="noopener noreferrer"
             >
-              <Image fill={true} src={icon.svgImage.src} alt={icon.alt} key={key}/>
+              <Image fill src={icon.svgImage.src} alt={icon.alt} key={key} sizes="auto,auto"/>
+            
             </a>
           </div>
         ))}

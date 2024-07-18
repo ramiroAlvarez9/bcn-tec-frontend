@@ -1,8 +1,8 @@
 import Lottie from "lottie-react";
 import Link from "next/link";
 import Image from "next/image";
-import marco1 from "../../public/icons/marco_1.json";
-import marco2 from "../../public/icons/marco_animado_2.json";
+import marco1 from "../../../public/icons/marco_1.json";
+import marco2 from "../../../public/icons/marco_animado_2.json";
 
 interface Props {
     project: any;
@@ -36,8 +36,9 @@ const ProjectsImgLinkWithOneElement = ({ project, index }: Props) => {
                             src={`https:${project.fields.imagenPrincipal.fields.file.url}`}
                             alt="Imagen de proyecto"
                             className="tw-object-cover"
-                            fill
                             key={index}
+                            fill
+                            sizes="@media (min-width: 768px) 300px,@media (orientation: landscape) 250px, @media (min-width: 1200px) 400px, @media (min-width: 1600px) 400px"
                         />
                         <div className="title__container" key={index}>
                             <h4 className="project__title" key={index} >

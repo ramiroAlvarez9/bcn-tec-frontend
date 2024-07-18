@@ -4,10 +4,6 @@ interface Props {
   imagen : string;
 }
 
-
-
-
-
 const ImageGridElement = ({imagen}: Props) => {
 
 
@@ -18,7 +14,8 @@ const ImageGridElement = ({imagen}: Props) => {
           src={`https:${imagen}`}
           alt="image"
           className="tw-object-cover"
-          layout="fill"
+          fill
+          sizes="100%"
         />
       </div>
     </>

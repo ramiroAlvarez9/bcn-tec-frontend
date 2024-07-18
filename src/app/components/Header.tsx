@@ -18,6 +18,7 @@ const Header = ({ }: Props) => {
               src={logoHeader}
               alt="logo"
               fill
+              sizes="75px, (min-width: 1200px) 150px"
             />
           </div>
 

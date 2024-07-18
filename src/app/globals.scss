@@ -18,10 +18,12 @@ $bcn-logo: #6dfacc;
 html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     position: relative;
     z-index: -2;
 }
+
 //menu section slide
 .slide {
     font-weight: 350;
@@ -250,19 +252,17 @@ body{
 
 
 
-#footer {
+#footer { 
     top: 79%;
     background-color: $white;
     color: $black;
     width: 100vw;
-    position: "fixed";
+    position: fixed;
     z-index: -1;
     left: 2.5%;
-    .footer_parentContainer{
-
-    }
-
 }
+
+
 
 .upArrowContainer {
     cursor: pointer;
@@ -272,11 +272,15 @@ body{
     top: 80%;
 }
 
+
 .space {
     position: relative;
     z-index: -2;
     height: 20vh;
 }
+
+
+
 
 //tablets
 @media (min-width: 768px) {
@@ -396,9 +400,9 @@ body{
     }
 
     #footer {
-      
-      
-      
+
+
+
         .links__column {
             margin-left: 15%;
         }
@@ -411,7 +415,6 @@ body{
         .h-logo__container {
             height: 75px;
             width: 75px;
-            //margin-left: 5%;
         }
     }
 
@@ -530,15 +533,15 @@ body{
         }
     }
 
-.upArrowContainer {
-    cursor: pointer;
-    width: auto;
-    height: auto;
-    position: fixed;
-    z-index: 9;
-    left: 95%;
-    top: 85%;
-}
+    .upArrowContainer {
+        cursor: pointer;
+        width: auto;
+        height: auto;
+        position: fixed;
+        z-index: 9;
+        left: 95%;
+        top: 85%;
+    }
 
 
 }
@@ -608,7 +611,7 @@ body{
             .horizontal-panel {
                 .container__carousel {
                     width: 100%;
-                    /* width: 75%;*/
+                    
 
                     .project__image {
                         width: 400px;
@@ -740,7 +743,6 @@ body{
             .horizontal-panel {
                 .container__carousel {
                     width: 100%;
-                    /* width: 60%;*/
 
                     .project__image {
                         width: 400px;

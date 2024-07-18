@@ -3,9 +3,8 @@ import arrowUp from "../../../public/icons/arrow-up.svg";
 import Image from "next/image";
 
 const FooterUpArrow = ({}) => {
-  const handleArrow = () => {
-    window.scrollTo(0, 0);
-  };
+  
+  const handleArrow = () => window.scrollTo(0, 0);
 
   return (
     <div
