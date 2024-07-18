@@ -4,8 +4,7 @@ import Slide from "./Slide";
 import { Spiral as Hamburger } from "hamburger-react";
 
 export default function MobileNav() {
-  type Visibility = /*Visibility type or*/ any;
-
+  
   const [slideMenuPositionX, setSlideMenuPositionX] = useState<number>(-100);
   const [isOpen, setOpen] = useState<boolean>(false);
   const [opacityModal, setOpacityModal] = useState<number>(0);

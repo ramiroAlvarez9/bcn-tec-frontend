@@ -17,7 +17,8 @@ const LetsTalk: NextPage<Props> = ({}) => {
         id="lets-talk"
         className="tw-flex tw-flex-col tw-items-center tw-justify-center"
         onMouseEnter={() => {
-          if (window.innerWidth > 1200) {
+          
+          if ( window.matchMedia("(min-width: 1200px)") ) {
             setTranslateXArrow(10);
             setTranslateYArrow(-10);
             setBrightness(300);
@@ -25,7 +26,7 @@ const LetsTalk: NextPage<Props> = ({}) => {
           
         }}
         onMouseLeave={() => {
-          if(window.innerWidth > 1200){
+          if(window.matchMedia("(min-width: 1200px)")){
             setTranslateXArrow(0);
             setTranslateYArrow(0);
             setBrightness(70);

@@ -6,7 +6,6 @@ import mailIcon from "../../../public/icons/icon_envelope.svg";
 import linkedinIcon from "../../../public/icons/icon_linkedin.svg";
 import Link from "next/link";
 
-type Visibility = /*Visibility type or*/ any;
 
 interface Props {
   isOpen : boolean;
@@ -15,7 +14,7 @@ interface Props {
   setOpen: any;
 }
 
-const Slide = ({ isOpen, slideMenuPositionX, closeTheMenu, setOpen  } : Props ) => {
+const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen  } : Props ) => {
   
 
   return (
