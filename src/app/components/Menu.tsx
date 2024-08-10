@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Slide from "./Slide";
 import { Spiral as Hamburger } from "hamburger-react";
 
+
 export default function MobileNav() {
   
   const [slideMenuPositionX, setSlideMenuPositionX] = useState<number>(-100);
@@ -18,13 +19,14 @@ export default function MobileNav() {
 
       This steps are the same in "closeTheMenu" function, with the negated values.
     */
+    //document.body.style.overflow = "hidden"
+    document.body.style.position = 'fixed';
     setSlideMenuPositionX(0);
-    document.body.style.overflowY = "hidden";
     setOpacityModal(1);
   };
   const closeTheMenu = (): void => {
     setSlideMenuPositionX(-101);
-    document.body.style.overflowY = "visible";
+    document.body.style.position = 'relative';
     setOpacityModal(0);
   };
 

@@ -13,15 +13,21 @@ $bcn-logo: #6dfacc;
         structural styles for project:
         (width and height for all views, colors and background colors, responsive media querys)
     --
+    
 */
 
 html {
     scroll-behavior: smooth;
+
 }
 
-body {
+.body {
+
     position: relative;
     z-index: -2;
+
+
+
 }
 
 //menu section slide
@@ -252,7 +258,7 @@ body {
 
 
 
-#footer { 
+#footer {
     top: 79%;
     background-color: $white;
     color: $black;
@@ -553,8 +559,8 @@ body {
 
         .h-logo__container {
             .img__handler {
-                height: 150px;
-                width: 150px;
+                height: 120px;
+                width: 120px;
             }
         }
     }
@@ -611,7 +617,7 @@ body {
             .horizontal-panel {
                 .container__carousel {
                     width: 100%;
-                    
+
 
                     .project__image {
                         width: 400px;
@@ -712,22 +718,67 @@ body {
         font-size: 10rem;
 
         .slide__itemsContainer {
-
-
+            height: 70%;
             .icons__container {
                 .icons {
                     width: 20%;
                     height: 20%;
+                    
                 }
             }
 
             .links__container {
+                
+                $blackToHover: #010100b4;
+
                 align-items: start;
-                font-size: 10rem;
                 letter-spacing: 20px;
+                
+                .link__container--a {
+                    position: relative;
+                    display: inline-block;
+                    color: $black;
+                    font-weight: 300;
+                    /* equivalente a text-xl en Tailwind */
+                    margin-bottom: 1rem;
+                    /* equivalente a mb-4 en Tailwind */
+                    padding-bottom: 3px;
+                    transition: color 0.2s ease;
+
+                    &:hover {
+                        color:$blackToHover ;
+                    }
+
+                    &::after,
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: calc(100% + 5px);
+                        height: 3px;
+                        width: 0;
+                        transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+                    }
+
+                    &::before {
+                        background-color: #2196f3;
+                        right: 0;
+                    }
+
+                    &::after {
+                        background-color: $bcn-logo;
+                        transition: width 0.5s cubic-bezier(0.29, 0.18, 0.26, 0.83);
+                        right: 0;
+                    }
+
+                    &:hover::after,
+                    &:hover::before {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
 
 
-                .link__container--a {}
+
 
             }
         }

@@ -37,11 +37,6 @@ const HeaderSocialMediaBar = ({} : Props) => {
                 link: "www.google.com",
               },
 
-              {
-                svgImage: instagramIcon,
-                alt: "Instagram",
-                link: "www.google.com",
-              },
             ]}
             tailwindImgProperties="icons tw-relative tw-w-6 tw-h-6 tw-mb-2"
             tailwindParentDivProperties=""
