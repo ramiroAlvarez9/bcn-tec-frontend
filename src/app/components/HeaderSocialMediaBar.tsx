@@ -29,7 +29,7 @@ const HeaderSocialMediaBar = ({} : Props) => {
               {
                 svgImage: mailIcon,
                 alt: "Mail",
-                link: "www.google.com",
+                link: "mailto:franciscophilip@gmail.com",
               },
               {
                 svgImage: linkedinIcon,

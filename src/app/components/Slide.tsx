@@ -5,15 +5,14 @@ import mailIcon from "../../../public/icons/icon_envelope.svg";
 import linkedinIcon from "../../../public/icons/icon_linkedin.svg";
 import Link from "next/link";
 
-
 interface Props {
-  isOpen : boolean;
+  isOpen: boolean;
   slideMenuPositionX: number;
   closeTheMenu: MouseEventHandler | undefined;
   setOpen: any;
 }
 
-const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen } : Props ) => {
+const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
   return (
     <>
       <div
@@ -29,7 +28,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen } : Props ) => {
               {
                 svgImage: mailIcon,
                 alt: "Mail",
-                link: "www.google.com",
+                link: "mailto:franciscophilip@gmail.com",
               },
               {
                 svgImage: linkedinIcon,
