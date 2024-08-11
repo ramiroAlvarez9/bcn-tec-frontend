@@ -74,14 +74,14 @@ const FooterColumns = ({ }) => {
         {/*Third column*/}
         <LinksColumn
           links={[
-            { text: "About", url: "https://www.google.com" },
+            { text: "About", url: "/" },
             {
               text: "work",
-              url: "https://www.google.com",
+              url: "#projects",
             },
             {
               text: "Contact",
-              url: "https://www.google.com",
+              url: "#footer",
             },
           ]}
           tailwindParentProperties={

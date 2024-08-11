@@ -22,16 +22,16 @@ const ProjectsImgLinkWithTwoElements = ({ proyecto1, proyecto2 }: Props) => {
         
         return (
           <div className="project__image" key={index}>
-            <div className={`marco__carousel${index++}`} key={index}>
+            <div className={`marco__carousel${index++}`}>
               <Link
                 href={`projects/${project.fields.idProyecto}`}
                 className="tw-absolute tw-z-50 tw-h-full tw-w-full"
-                key={index}
+   
               >
                 <Lottie
                   animationData={marcoAnimation}
                   loop={true}
-                  key={index}
+    
                 />
               </Link>
             </div>
@@ -40,14 +40,13 @@ const ProjectsImgLinkWithTwoElements = ({ proyecto1, proyecto2 }: Props) => {
               src={`https:${project.fields.imagenPrincipal.fields.file.url}`}
               alt=""
               className="tw-object-cover"
-              key={index}
               fill 
               sizes="@media (min-width: 768px) 300px,@media (orientation: landscape) 250px, @media (min-width: 1200px) 400px, @media (min-width: 1600px) 400px"
 
             />
 
-            <div className="title__container" key={index}>
-              <h4 className="project__title" key={index}>
+            <div className="title__container">
+              <h4 className="project__title" >
                 {project.fields.titulo}
               </h4>
             </div>
