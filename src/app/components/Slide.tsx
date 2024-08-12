@@ -33,7 +33,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
               {
                 svgImage: linkedinIcon,
                 alt: "Linkedin",
-                link: "www.google.com",
+                link: "https://www.linkedin.com",
               },
             ]}
             tailwindImgProperties="icons tw-relative tw-w-8 tw-h-8 tw-mb-2 tw-mr-12"
@@ -43,7 +43,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
           {/* Links section */}
           <div className="links__container tw-ml-12 tw-w-3/4 tw-flex tw-flex-col tw-justify-center">
             <Link
-              className="tw-w-1/2 link__container--a"
+              className=" link__container--a"
               href="/"
               onClick={() => {
                 closeTheMenu();
@@ -54,7 +54,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
             </Link>
 
             <Link
-              className="tw-w-1/2 link__container--a"
+              className=" link__container--a"
               href="#projects"
               onClick={() => {
                 closeTheMenu();
@@ -64,7 +64,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
               work
             </Link>
             <Link
-              className="tw-w-1/2 link__container--a"
+              className="link__container--a"
               href="#lets-talk"
               onClick={() => {
                 closeTheMenu();

@@ -6,8 +6,7 @@ interface LinksColumnStyles {
   tailwindListElementProperties: { properties: string };
 }
 
-const FooterColumns = ({ }) => {
-
+const FooterColumns = ({}) => {
   //Styles for columns
   const LinksColumnStyles: LinksColumnStyles = {
     tailwindParentProperties: {
@@ -20,79 +19,71 @@ const FooterColumns = ({ }) => {
   };
 
   return (
-   
-      <div className="links__container tw-w-3/5 tw-flex tw-flex-row">
-        {/*First column*/}
-        <LinksColumn
-          links={[
-            /* 
+    <div className="links__container tw-w-3/5 tw-flex tw-flex-row">
+      {/*First column*. Its empty because  its needed to occupy the first space*/}
+      <LinksColumn
+        links={[
+          /* 
               links prop description:
                   -Links is an object which has two atributtes, this are:
                       text: is the content of the link inside the column .
                       url : is the url that redirect to an internal or external page in the web.
             
             */
-            { text: "Contacto", url: "https://www.google.com" },
-            {
-              text: "Barcelona,Spain Lorem, ipsum dolor sit amet consectetur adipisicing",
-              url: "https://www.google.com",
-            },
-          ]}
-          tailwindParentProperties={
-            LinksColumnStyles.tailwindParentProperties.properties
-          }
-          tailwindListElementProperties={
-            LinksColumnStyles.tailwindListElementProperties.properties
-          }
-          tailwindAnchorTagProperies=""
-        />
-        {/*Second column*/}
-        <LinksColumn
-          links={[
-            { text: "General", url: "https://www.google.com" },
-            {
-              text: "Terms&Conditions",
-              url: "https://www.google.com",
-            },
-            {
-              text: "Privacy Policy",
-              url: "https://www.google.com",
-            },
-            {
-              text: "Cookies",
-              url: "https://www.google.com",
-            },
-          ]}
-          tailwindParentProperties={
-            LinksColumnStyles.tailwindParentProperties.properties
-          }
-          tailwindListElementProperties={
-            LinksColumnStyles.tailwindListElementProperties.properties
-          }
-          tailwindAnchorTagProperies=""
-        />
-        {/*Third column*/}
-        <LinksColumn
-          links={[
-            { text: "About", url: "/" },
-            {
-              text: "work",
-              url: "#projects",
-            },
-            {
-              text: "Contact",
-              url: "#footer",
-            },
-          ]}
-          tailwindParentProperties={
-            LinksColumnStyles.tailwindParentProperties.properties
-          }
-          tailwindListElementProperties={
-            LinksColumnStyles.tailwindListElementProperties.properties
-          }
-          tailwindAnchorTagProperies=""
-        />
-      </div>
+     
+        ]}
+        tailwindParentProperties={
+          LinksColumnStyles.tailwindParentProperties.properties
+        }
+        tailwindListElementProperties={
+          LinksColumnStyles.tailwindListElementProperties.properties
+        }
+        tailwindAnchorTagProperies=""
+      />
+
+      {/*Second column*/}
+      <LinksColumn
+        links={[
+          { text: "About", url: "/" },
+          {
+            text: "work",
+            url: "#projects",
+          },
+          {
+            text: "Contact",
+            url: "#footer",
+          },
+        ]}
+        tailwindParentProperties={
+          LinksColumnStyles.tailwindParentProperties.properties
+        }
+        tailwindListElementProperties={
+          LinksColumnStyles.tailwindListElementProperties.properties
+        }
+        tailwindAnchorTagProperies=""
+      />
+      {/*Third column*/}
+      <LinksColumn
+        links={[
+          { text: "Barcelona, España", url: "" },
+          {
+            text: "Terms & Conditions",
+            url: "terms-and-conditions.pdf",
+          },
+          {
+            text: "Privacy Policy",
+            url: "privacy-and-policy.pdf",
+          },
+        ]}
+        tailwindParentProperties={
+          LinksColumnStyles.tailwindParentProperties.properties
+        }
+        tailwindListElementProperties={
+          LinksColumnStyles.tailwindListElementProperties.properties
+        }
+        tailwindAnchorTagProperies=""
+      />
+    </div>
   );
 };
 

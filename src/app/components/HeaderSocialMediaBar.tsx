@@ -34,12 +34,12 @@ const HeaderSocialMediaBar = ({} : Props) => {
               {
                 svgImage: linkedinIcon,
                 alt: "Linkedin",
-                link: "www.google.com",
+                link: "https://www.linkedin.com",
               },
 
             ]}
             tailwindImgProperties="icons tw-relative tw-w-6 tw-h-6 tw-mb-2"
-            tailwindParentDivProperties=""
+            tailwindParentDivProperties="" 
           />
           
         </div>
