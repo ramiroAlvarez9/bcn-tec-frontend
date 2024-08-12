@@ -46,7 +46,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
               className=" link__container--a"
               href="/"
               onClick={() => {
-                closeTheMenu();
+                closeTheMenu;
                 setOpen(false);
               }}
             >
@@ -57,7 +57,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
               className=" link__container--a"
               href="#projects"
               onClick={() => {
-                closeTheMenu();
+                closeTheMenu;
                 setOpen(false);
               }}
             >
@@ -67,7 +67,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
               className="link__container--a"
               href="#lets-talk"
               onClick={() => {
-                closeTheMenu();
+                closeTheMenu;
                 setOpen(false);
               }}
             >
