@@ -33,7 +33,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
               {
                 svgImage: linkedinIcon,
                 alt: "Linkedin",
-                link: "https://www.linkedin.com",
+                link: "https://www.linkedin.com/in/franciscophilip/",
               },
             ]}
             tailwindImgProperties="icons tw-relative tw-w-8 tw-h-8 tw-mb-2 tw-mr-12"

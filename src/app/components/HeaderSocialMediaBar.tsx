@@ -34,7 +34,7 @@ const HeaderSocialMediaBar = ({} : Props) => {
               {
                 svgImage: linkedinIcon,
                 alt: "Linkedin",
-                link: "https://www.linkedin.com",
+                link: "https://www.linkedin.com/in/franciscophilip/",
               },
 
             ]}

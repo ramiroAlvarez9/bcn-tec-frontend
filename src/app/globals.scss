@@ -743,12 +743,13 @@ html {
                     margin-bottom: 1rem;
                     /* equivalente a mb-4 en Tailwind */
                     padding-bottom: 3px;
-                    transition: color 0.2s ease;
-
+                    transition: color 0.5s ease 0.2s, letter-spacing 0.7s ease;
+                
                     &:hover {
-                        color:$blackToHover ;
+                        color: $blackToHover;
+                        letter-spacing: 50px;
                     }
-
+                
                     &::after,
                     &::before {
                         content: '';
@@ -758,25 +759,24 @@ html {
                         width: 0;
                         transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
                     }
-
+                
                     &::before {
                         background-color: #2196f3;
                         right: 0;
                     }
-
+                
                     &::after {
                         background-color: $bcn-logo;
                         transition: width 0.5s cubic-bezier(0.29, 0.18, 0.26, 0.83);
                         right: 0;
                     }
-
+                
                     &:hover::after,
                     &:hover::before {
                         width: 100%;
                         left: 0;
                     }
                 }
-
 
 
 
