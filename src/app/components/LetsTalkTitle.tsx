@@ -16,7 +16,7 @@ const LetsTalkTitle = ({translateX,translateY, brightness} : Props) => {
         </a>
       </h3>
       <div className="arrowContainer ">
-        <a href="https://www.google.com" target="_blank">
+        <a href="mailto:franciscophilip@gmail.com" target="_blank">
           <Image
             src={arrowTopRightColor}
             alt="arrow-enter"

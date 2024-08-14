@@ -66,7 +66,7 @@ const Slide = ({ slideMenuPositionX, closeTheMenu, setOpen }: Props) => {
             <Link
               className="link__container--a"
               href="#lets-talk"
-              onClick={() => {
+              onClick={() => { 
                 closeTheMenu;
                 setOpen(false);
               }}

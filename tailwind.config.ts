@@ -10,7 +10,7 @@ const config: Config = {
   prefix: "tw-",
   theme: {
     fontSize: {
-      xxs: ["9px", "12px"],
+      xxs: ["9px", "14px"],
       xs: ["12px", "14px"],
       sm: ["14px", "20px"],
       base: ["16px", "24px"],
