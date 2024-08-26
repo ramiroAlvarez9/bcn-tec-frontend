@@ -43,6 +43,6 @@ CONTENTFUL_SPACE_ID= "space id de contentful"
 CONTENTFUL_ACCESS_TOKEN= "access token de contentful"
 ```
 
-Es importante recordar que esta variable, con estos datos, deben de estar cargados en el server de producción.
+Es importante que esta variable sea cargada dentro del servidor de produccion.
 
 
