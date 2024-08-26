@@ -12,29 +12,36 @@ Después de esto, se pueden seguir los siguientes pasos:
 clonar repositorio, esto se puede realizar con:
 
 SSH:
+```
 git clone git@github.com:ramiroAlvarez9/bcn-tec-frontend.git
-
+```
 HTTPS:
+```
 https://github.com/ramiroAlvarez9/bcn-tec-frontend.git
+```
 
 
 # Paso 2:
 Abrir el proyecto en la terminal de su sistema operativo,
 y ejecutar el comando para la instalacion de depedencias en el proyecto:
 
+```
 npm install
+```
 
 posterior a esto, se debe de ejecutar el siguiente comando para poder correr el proyecto localmente:
-
+```
 npm run dev
+```
 
 # Paso 3:
 
 Crear una variable de entorno local, con el nombre .env.local, la cual contenga la siguiente informacion
-
+```
 CI = false
 CONTENTFUL_SPACE_ID= "space id de contentful"
 CONTENTFUL_ACCESS_TOKEN= "access token de contentful"
+```
 
 Es importante recordar que esta variable, con estos datos, deben de estar cargados en el server de producción.
 
