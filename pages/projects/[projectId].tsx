@@ -7,9 +7,25 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState, useCallback } from 'react';
 import ReactLoading from "react-loading";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { createClient } from "contentful";
 
+
+
+const options = {
+  renderMark: {
+    [MARKS.BOLD]: (text: string) => <strong>{text}</strong>, // Render bold text
+  },
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node: any, children: any) => <p>{children}</p>,
+    [BLOCKS.UL_LIST]: (node: any, children: any) => <ul>{children}</ul>, // Render unordered list
+    [BLOCKS.OL_LIST]: (node: any, children: any) => <ol>{children}</ol>, // Render ordered list
+    [BLOCKS.LIST_ITEM]: (node: any, children: any) => <li>{children}</li>, // Render list items
+    [BLOCKS.HEADING_1]: (node: any, children: any) => <h1>{children}</h1>,
+    [BLOCKS.HEADING_2]: (node: any, children: any) => <h2>{children}</h2>,
+    [BLOCKS.QUOTE]: (node: any, children: any) => <blockquote>{children}</blockquote>,
+  },
+};
 interface ContentfulFile {
   url: string;
 }
@@ -76,7 +92,7 @@ const Projectpage = ({ proyectos }: Props) => {
             <GridProjectPage
               imagenes={proyectoPorId.fields.imagenesDelProyecto}
               descripcionDelProyecto={
-                documentToReactComponents(proyectoPorId.fields.descripcionDelProyecto)
+                documentToReactComponents(proyectoPorId.fields.descripcionDelProyecto, options)
               }
               videoDeYoutube={proyectoPorId.fields.idVideoDeYoutube}
             />
