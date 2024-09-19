@@ -6,6 +6,8 @@ import GridProjectPage from "@/app/components/GridProjectPage";
 import { useRouter } from "next/router";
 import React, { useEffect, useState, useCallback } from 'react';
 import ReactLoading from "react-loading";
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 import { createClient } from "contentful";
 
 interface ContentfulFile {
@@ -40,11 +42,10 @@ interface ContentfulProject {
 interface Props {
   proyectos: ContentfulProject[];
 }
-
 const Projectpage = ({ proyectos }: Props) => {
   const [proyectoPorId, setProyectoPorId] = useState<ContentfulProject | null>(null);
 
-  const router = useRouter()
+  const router = useRouter();
 
   const getProyectosById = useCallback(() => {
     const proyectoById = proyectos.filter(
@@ -57,17 +58,11 @@ const Projectpage = ({ proyectos }: Props) => {
     getProyectosById();
   }, [getProyectosById]);
 
-
   return (
     <>
       {proyectoPorId?.fields === undefined ? (
         <div className="loading__container tw-h-screen tw-w-screen tw-flex tw-items-center tw-justify-center">
-          <ReactLoading
-            type={"spin"}
-            color={"#6dfacc"}
-            height={40}
-            width={40}
-          />
+          <ReactLoading type={"spin"} color={"#6dfacc"} height={40} width={40} />
         </div>
       ) : (
         <section className="projectpage tw-flex tw-justify-center tw-overflow-hidden">
@@ -81,8 +76,7 @@ const Projectpage = ({ proyectos }: Props) => {
             <GridProjectPage
               imagenes={proyectoPorId.fields.imagenesDelProyecto}
               descripcionDelProyecto={
-                proyectoPorId.fields.descripcionDelProyecto.content[0]
-                  .content[0].value
+                documentToReactComponents(proyectoPorId.fields.descripcionDelProyecto)
               }
               videoDeYoutube={proyectoPorId.fields.idVideoDeYoutube}
             />
@@ -92,6 +86,8 @@ const Projectpage = ({ proyectos }: Props) => {
     </>
   );
 };
+
+
 
 Projectpage.getInitialProps = async () => {
   const createContentClient = () => {
