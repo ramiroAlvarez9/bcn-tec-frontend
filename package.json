@@ -13,7 +13,7 @@
     "@contentful/contentful-extension-scripts": "^0.21.0",
     "@contentful/rich-text-react-renderer": "^15.22.11",
     "@gsap/react": "^2.1.1",
-    "contentful": "^10.12.0",
+    "contentful": "^10.15.1",
     "dotenv": "^16.4.5",
     "hamburger-react": "^2.5.0",
     "lottie-react": "^2.4.0",

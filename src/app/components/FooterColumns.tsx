@@ -11,7 +11,7 @@ const FooterColumns = ({}) => {
   const LinksColumnStyles: LinksColumnStyles = {
     tailwindParentProperties: {
       properties:
-        "links__column tw-w-1/5 tw-h-full tw-ml-6 tw-flex tw-flex-col tw-justify-start tw-items-center",
+        "links__column tw-w-1/5 tw-h-full tw-ml-6 tw-flex tw-flex-col tw-justify-start tw-items-center tw-list-none" ,
     },
     tailwindListElementProperties: {
       properties: "footer__text tw-text-xxs tw-w-full tw-relative tw-z-10",
@@ -75,7 +75,7 @@ const FooterColumns = ({}) => {
             url: "privacy-and-policy.pdf",
           },
         ]}
-        tailwindParentProperties= "tw-ml-4 xl:tw-ml-36"
+        tailwindParentProperties= "tw-ml-4 xl:tw-ml-36 tw-list-none"
         tailwindListElementProperties={
           LinksColumnStyles.tailwindListElementProperties.properties
         }

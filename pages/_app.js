@@ -5,7 +5,7 @@ import FooterUpArrow from "@/app/components/FooterUpArrow";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function MyApp({ Component, pageProps }) {
-  //< Footer />
+  
   return (
     <main className={inter.className}>
       <Header />

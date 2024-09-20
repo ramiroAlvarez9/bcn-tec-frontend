@@ -8,7 +8,7 @@ const FooterUpArrow = ({}) => {
 
   return (
     <div
-      className=" upArrowContainer tw-pt-20 tw-w-1/5 tw-flex tw-flex-row tw-items-end tw-justify-end"
+      className=" upArrowContainer tw-pt-20 tw-w-1/5 tw-flex tw-flex-row tw-items-end tw-justify-end xl:tw-pt-12"
       onClick={handleArrow}
     >
       <span>UP</span>

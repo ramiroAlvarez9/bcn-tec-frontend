@@ -12,7 +12,7 @@ const Footer: NextPage<Props> = ({}) => {
       <div id="footer">
         <div className="footer_parentContainer tw-flex tw-flex-col tw-justify-end"
         >
-          <div className="footer__container tw-h-3/4 tw-w-full tw-flex tw-flex-row tw-mb-12 tw-mt-12 ">
+          <div className="footer__container tw-h-3/4 tw-w-full tw-flex tw-flex-row tw-mb-12 tw-mt-12 xl:tw-mt-6 2xl:tw-mt-14">
             <Logo
               svgImage={logoFooter}
               height={60}
