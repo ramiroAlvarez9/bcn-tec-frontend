@@ -11,7 +11,7 @@ const LetsTalkTitle = ({translateX,translateY, brightness} : Props) => {
   return (
     <div className="  lets-talk__container tw-w-4/5 tw-h-1/2 tw-flex tw-justify-between tw-items-center">
       <h3 className="lets-talk__title">
-        <a href="https://www.google.com" target="_blank">
+        <a href="mailto:franciscophilip@gmail.com" target="_blank">
           Let's talk!
         </a>
       </h3>
